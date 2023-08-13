@@ -4,7 +4,8 @@ import requests
 import datetime
 import time
 import pandas as pd
-
+import random
+from keywords import keywords
 
 def get_news(topic, date, sort_type, apikey):
     url = f"https://newsapi.org/v2/everything?q={topic}&from={date}&sortBy={sort_type}&apiKey={apikey}"
@@ -17,9 +18,9 @@ def get_news(topic, date, sort_type, apikey):
 if __name__ == "__main__":
    # apikey=os.environ.get("news_api_key")
     apikey=st.secrets["news_api_key"]
-    topic = ["Tesla","Microsoft"]
     sort_type = "popularity"
     date=(datetime.date.today()-datetime.timedelta(1)).strftime("%Y-%m-%d") 
+    
 
 
 
@@ -28,7 +29,6 @@ if __name__ == "__main__":
 
     initial_time=datetime.datetime.now()
     count=0
-    tp=0
 
     if "news" not in st.session_state:
         st.session_state.news = "wait for loading"
@@ -36,7 +36,8 @@ if __name__ == "__main__":
 
     while True:
         if count<10:
-            news=get_news(topic=topic[tp], date=date, sort_type=sort_type, apikey=apikey)
+            kw=random.choice(keywords)
+            news=get_news(topic=kw, date=date, sort_type=sort_type, apikey=apikey)
             df=pd.DataFrame(data=news.get("articles"))
             st.session_state['news'] = df
 
