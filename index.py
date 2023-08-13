@@ -1,6 +1,6 @@
 import streamlit as st
 import requests
-import os
+# import os
 import datetime
 import time
 import pandas as pd
@@ -15,7 +15,8 @@ def get_news(topic, date, sort_type, apikey):
 
 
 if __name__ == "__main__":
-    apikey=os.environ.get("news_api_key")
+   # apikey=os.environ.get("news_api_key")
+    apikey=st.secrets["news_api_key"]
     topic = ["Tesla","Microsoft"]
     sort_type = "popularity"
     date=(datetime.date.today()-datetime.timedelta(1)).strftime("%Y-%m-%d") 
