@@ -16,7 +16,6 @@ def get_news(topic, date, sort_type, apikey):
 
 if __name__ == "__main__":
     apikey=os.environ.get("news_api_key")
-    #apikey='d4bb6970165d44f8b5d52c52b9ca4c2a'
     topic = ["Tesla","Microsoft"]
     sort_type = "popularity"
     date=(datetime.date.today()-datetime.timedelta(1)).strftime("%Y-%m-%d") 
