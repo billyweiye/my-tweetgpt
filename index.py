@@ -42,8 +42,7 @@ if __name__ == "__main__":
             st.session_state['news'] = df
 
             st.write(st.session_state.news)
-
-            tp=0 if tp!=0 else 1 
+            
             count += 1 
             time.sleep(30)
         else :
