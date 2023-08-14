@@ -6,9 +6,11 @@ import time
 import pandas as pd
 import random
 from keywords import keywords
+from tweetgpt import generate_tweet
+from tweet import post_tweet 
 
 def get_news(topic, date, sort_type, apikey):
-    url = f"https://newsapi.org/v2/everything?q={topic}&from={date}&sortBy={sort_type}&apiKey={apikey}"
+    url = f"https://newsapi.org/v2/everything?q={topic}&from={date}&sortBy={sort_type}&apiKey={apikey}&language=en"
 
     response = requests.get(url)
 
@@ -18,7 +20,18 @@ def get_news(topic, date, sort_type, apikey):
 if __name__ == "__main__":
    # apikey=os.environ.get("news_api_key")
     apikey=st.secrets["news_api_key"]
-    sort_type = "popularity"
+
+    openai_api_key=st.secrets["openai_api_key"]
+
+    auth={
+            "consumer_key" : st.secrets["api_key"] ,
+            "consumer_secret" :st.secrets["api_secret"],
+            "access_token" :st.secrets["access_token"] ,
+            "access_token_secret" :st.secrets["token_secret"] ,
+    }
+
+
+    sort_type = "relevancy"
     date=(datetime.date.today()-datetime.timedelta(1)).strftime("%Y-%m-%d") 
     
 
@@ -32,14 +45,29 @@ if __name__ == "__main__":
 
     if "news" not in st.session_state:
         st.session_state.news = "wait for loading"
+    
+    kw='Elon Musk'
+    news=get_news(topic=kw, date=date, sort_type=sort_type, apikey=apikey)
+
 
 
     while True:
         if count<10:
-            kw=random.choice(keywords)
-            news=get_news(topic=kw, date=date, sort_type=sort_type, apikey=apikey)
-            df=pd.DataFrame(data=news.get("articles"))
-            st.session_state['news'] = df
+           # kw=random.choice(keywords)
+           # df=pd.DataFrame(data=news.get("articles"))
+           # st.session_state['news'] = df
+            news_title=news.get("articles")[0].get("title")
+            new_description=news.get("articles")[0].get("description")
+            news_url=news.get("articles")[0].get("url")
+
+            prompts=f"title:{news_title} || description:{new_description}"
+
+            tweets=generate_tweet(openai_api_key,prompts)
+
+            tweets += f" {news_url}"
+
+            post_tweet(auth=auth,text=tweets)
+
 
             st.write(st.session_state.news)
             
