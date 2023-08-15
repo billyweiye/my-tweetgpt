@@ -1,3 +1,4 @@
 .env
 *.csv
 test.ipynb
+test.py

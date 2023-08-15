@@ -1,12 +1,9 @@
+import schedule
 import streamlit as st
 import requests
 # import os
 import datetime
-import pytz
 import time
-import pandas as pd
-import random
-from keywords import keywords
 from tweetgpt import generate_tweet
 from tweet import post_tweet 
 
@@ -17,6 +14,57 @@ def get_news(topic, date, sort_type, apikey):
 
     return response.json()
 
+# Counter to keep track of job executions
+job_execution_count = 0
+max_job_executions = 10
+
+def reset_job_counter():
+    global job_execution_count
+    job_execution_count = 0
+    print("Job execution count reset at", datetime.datetime.now())
+
+def main():
+    global job_execution_count
+    if job_execution_count < max_job_executions:
+        #get news list
+        kw='Electric Vehicles'
+        sort_type = "relevancy"
+        news=get_news(topic=kw, date=date, sort_type=sort_type, apikey=apikey)
+
+
+        news_title=news.get("articles")[job_execution_count].get("title")
+        new_description=news.get("articles")[job_execution_count].get("description")
+        news_url=news.get("articles")[job_execution_count].get("url")
+
+        prompts=f"title:{news_title} || description:{new_description}"
+
+        tweets=generate_tweet(openai_api_key,prompts)
+
+        tweets += f" {news_url}"
+
+        post_tweet(auth=auth,text=tweets)
+
+        # st.session_state['news'] =f"{job_execution_count}=> {prompts}"
+
+
+        st.write(f"{job_execution_count}=> {prompts}")
+
+        job_execution_count += 1
+
+
+
+def schedule_job():
+    # Schedule the job to reset the counter every day at midnight
+    schedule.every().day.at("00:00").do(reset_job_counter)
+
+    # Schedule the job to run every 10 to 48 minutes between 8 am and 10 pm
+    schedule.every(10).to(25).minutes.do(main)
+
+    while True:
+        now = datetime.datetime.now()
+        if now.hour >= 8 and now.hour <= 22:
+            schedule.run_pending()
+        time.sleep(1)  # Sleep for a second to avoid high CPU usage
 
 if __name__ == "__main__":
    # apikey=os.environ.get("news_api_key")
@@ -31,65 +79,25 @@ if __name__ == "__main__":
             "access_token_secret" :st.secrets["token_secret"] ,
     }
 
+    # # 指定目标时区
+    # target_timezone = pytz.timezone('America/New_York')
 
-    sort_type = "relevancy"
+    # # 获取当前时间（无时区信息）
+    # current_time = datetime.datetime.now()
 
-    # 指定目标时区
-    target_timezone = pytz.timezone('America/New_York')
+    # # 将当前时间设置为目标时区的时间
+    # target_time = current_time.astimezone(target_timezone)
 
-    # 获取当前时间（无时区信息）
-    current_time = datetime.datetime.now()
+    date=(datetime.datetime.now()-datetime.timedelta(1)).strftime("%Y-%m-%d") 
 
-    # 将当前时间设置为目标时区的时间
-    target_time = current_time.astimezone(target_timezone)
 
-    date=(target_time-datetime.timedelta(1)).strftime("%Y-%m-%d") 
+    # if "news" not in st.session_state:
+    #     st.session_state.news = "wait for loading"
+    
+    schedule_job()
     
 
 
-
-   # df.to_csv("test.csv",index=False)
-
-
-    initial_time=datetime.datetime.now()
-    count=0
-
-    if "news" not in st.session_state:
-        st.session_state.news = "wait for loading"
-    
-    kw='Elon Musk'
-    news=get_news(topic=kw, date=date, sort_type=sort_type, apikey=apikey)
-
-    news_cnt=len(news.get("articles"))
-
-    count=0
-
-    while True:
-        if count<10 and count<news_cnt:
-           # kw=random.choice(keywords)
-           # df=pd.DataFrame(data=news.get("articles"))
-           # st.session_state['news'] = df
-            news_title=news.get("articles")[count].get("title")
-            new_description=news.get("articles")[count].get("description")
-            news_url=news.get("articles")[count].get("url")
-
-            prompts=f"title:{news_title} || description:{new_description}"
-
-            tweets=generate_tweet(openai_api_key,prompts)
-
-            tweets += f" {news_url}"
-
-            post_tweet(auth=auth,text=tweets)
-
-            st.session_state['news'] =f"{count}=> {prompts}"
-
-
-            st.write(st.session_state.news)
-            
-            count += 1 
-            time.sleep(30)
-        else :
-            break
 
     
 
