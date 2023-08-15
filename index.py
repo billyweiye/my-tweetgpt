@@ -62,7 +62,7 @@ def schedule_job():
 
     while True:
         now = datetime.datetime.now()
-        if now.hour >= 8 and now.hour <= 22:
+        if now.hour >= 8 and now.hour <= 23:
             schedule.run_pending()
         time.sleep(1)  # Sleep for a second to avoid high CPU usage
 
