@@ -58,7 +58,7 @@ def schedule_job():
     schedule.every().day.at("00:00").do(reset_job_counter)
 
     # Schedule the job to run every 10 to 48 minutes between 8 am and 10 pm
-    schedule.every(30).to(180).seconds.do(main)
+    schedule.every(30).to(60).minutes.do(main)
 
     while True:
         now = datetime.datetime.now()
