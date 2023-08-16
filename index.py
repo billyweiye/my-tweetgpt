@@ -27,7 +27,7 @@ def main():
     global job_execution_count
     if job_execution_count < max_job_executions:
         #get news list
-        kw='Electric Vehicles'
+        kw='Elon Musk'
         sort_type = "relevancy"
         news=get_news(topic=kw, date=date, sort_type=sort_type, apikey=apikey)
 
