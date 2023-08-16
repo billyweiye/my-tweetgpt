@@ -61,7 +61,8 @@ def schedule_job():
         try:
             now = datetime.datetime.now()
             if now.hour >= 8 and now.hour <= 23:
-                logging.info(schedule.idle_seconds())
+                logging.info(f"TASK: {job_execution_count}")
+                logging.info(schedule.next_run())
                 schedule.run_pending()
             time.sleep(1)  # Sleep for a second to avoid high CPU usage
         except Exception as e:
