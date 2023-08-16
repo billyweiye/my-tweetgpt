@@ -26,6 +26,8 @@ def reset_job_counter():
 def main():
     global job_execution_count
     if job_execution_count < max_job_executions:
+        logging.info(f"TASK: {job_execution_count}")
+
         #get news list
         kw='Elon Musk'
         sort_type = "relevancy"
@@ -61,8 +63,6 @@ def schedule_job():
         try:
             now = datetime.datetime.now()
             if now.hour >= 8 and now.hour <= 23:
-                logging.info(f"TASK: {job_execution_count}")
-                logging.info(schedule.next_run())
                 schedule.run_pending()
             time.sleep(1)  # Sleep for a second to avoid high CPU usage
         except Exception as e:
