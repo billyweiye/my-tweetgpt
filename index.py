@@ -1,7 +1,6 @@
 import schedule
-import streamlit as st
 import requests
-# import os
+import configparser
 import datetime
 import time
 from tweetgpt import generate_tweet
@@ -44,11 +43,6 @@ def main():
 
         post_tweet(auth=auth,text=tweets)
 
-        # st.session_state['news'] =f"{job_execution_count}=> {prompts}"
-
-
-        st.write(f"{job_execution_count}=> {prompts}")
-
         job_execution_count += 1
 
 
@@ -67,16 +61,19 @@ def schedule_job():
         time.sleep(1)  # Sleep for a second to avoid high CPU usage
 
 if __name__ == "__main__":
-   # apikey=os.environ.get("news_api_key")
-    apikey=st.secrets["news_api_key"]
+    config = configparser.ConfigParser()
+    # 读取配置文件
+    config.read('config.ini')
 
-    openai_api_key=st.secrets["openai_api_key"]
+    apikey=config['news']['api_key']
+
+    openai_api_key=config['openai']["openai_api_key"]
 
     auth={
-            "consumer_key" : st.secrets["api_key"] ,
-            "consumer_secret" :st.secrets["api_secret"],
-            "access_token" :st.secrets["access_token"] ,
-            "access_token_secret" :st.secrets["token_secret"] ,
+            "consumer_key" :config['twitter']["api_key"] ,
+            "consumer_secret" :config['twitter']["api_secret"],
+            "access_token" :config['twitter']["access_token"] ,
+            "access_token_secret" :config['twitter']["token_secret"] ,
     }
 
     # # 指定目标时区
