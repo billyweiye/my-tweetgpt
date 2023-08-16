@@ -5,6 +5,7 @@ import datetime
 import time
 from tweetgpt import generate_tweet
 from tweet import post_tweet 
+import logging 
 
 def get_news(topic, date, sort_type, apikey):
     url = f"https://newsapi.org/v2/everything?q={topic}&from={date}&sortBy={sort_type}&apiKey={apikey}&language=en"
@@ -20,7 +21,7 @@ max_job_executions = 10
 def reset_job_counter():
     global job_execution_count
     job_execution_count = 0
-    print("Job execution count reset at", datetime.datetime.now())
+    logging.info("Job execution count reset at", datetime.datetime.now())
 
 def main():
     global job_execution_count
@@ -41,6 +42,8 @@ def main():
 
         tweets += f" {news_url}"
 
+        logging.info(job_execution_count,'||',tweets)
+
         post_tweet(auth=auth,text=tweets)
 
         job_execution_count += 1
@@ -55,12 +58,24 @@ def schedule_job():
     schedule.every(30).to(180).seconds.do(main)
 
     while True:
-        now = datetime.datetime.now()
-        if now.hour >= 8 and now.hour <= 23:
-            schedule.run_pending()
-        time.sleep(1)  # Sleep for a second to avoid high CPU usage
+        try:
+            now = datetime.datetime.now()
+            if now.hour >= 8 and now.hour <= 23:
+                schedule.run_pending()
+            time.sleep(1)  # Sleep for a second to avoid high CPU usage
+        except Exception as e:
+            logging.error("An unexpected error occurred: %s", e)
+            time.sleep(30)
 
 if __name__ == "__main__":
+    # 配置日志输出的格式
+    logging.basicConfig(
+        filename='app.log', level=logging.INFO,  # 设置日志级别，可选的级别有 DEBUG, INFO, WARNING, ERROR, CRITICAL
+        format="%(asctime)s - %(levelname)s - %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S"
+    )
+
+
     config = configparser.ConfigParser()
     # 读取配置文件
     config.read('config.ini')
