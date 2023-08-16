@@ -16,7 +16,7 @@ def get_news(topic, date, sort_type, apikey):
 
 # Counter to keep track of job executions
 job_execution_count = 0
-max_job_executions = 10
+max_job_executions = 20
 
 def reset_job_counter():
     global job_execution_count
@@ -55,7 +55,7 @@ def schedule_job():
     schedule.every().day.at("00:00").do(reset_job_counter)
 
     # Schedule the job to run every 10 to 48 minutes between 8 am and 10 pm
-    schedule.every(30).to(180).seconds.do(main)
+    schedule.every(10).to(25).minutes.do(main)
 
     while True:
         try:
