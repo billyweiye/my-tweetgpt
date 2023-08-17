@@ -18,6 +18,8 @@ def get_news(topic, date, sort_type, apikey):
 job_execution_count = 0
 max_job_executions = 20
 
+news_posted=[]
+
 def reset_job_counter():
     global job_execution_count
     job_execution_count = 0
@@ -29,14 +31,27 @@ def main():
         logging.info(f"TASK: {job_execution_count}")
 
         #get news list
-        kw='Elon Musk'
+        kw='China'
         sort_type = "relevancy"
         news=get_news(topic=kw, date=date, sort_type=sort_type, apikey=apikey)
 
+        cnt=0
+        while True:
+            news_title=news.get("articles")[job_execution_count+cnt].get("title")
+            if news_title not in news_posted :
+                break
+            elif cnt>=max_job_executions:
+                job_execution_count=max_job_executions
+                return
+            else:
+                cnt+=1
+                time.sleep(0.8)
 
-        news_title=news.get("articles")[job_execution_count].get("title")
-        new_description=news.get("articles")[job_execution_count].get("description")
-        news_url=news.get("articles")[job_execution_count].get("url")
+        global news_posted
+        news_posted.append(news_title)
+        news_title=news.get("articles")[job_execution_count+cnt].get("title")
+        new_description=news.get("articles")[job_execution_count+cnt].get("description")
+        news_url=news.get("articles")[job_execution_count+cnt].get("url")
 
         prompts=f"title:{news_title} || description:{new_description}"
 
@@ -44,7 +59,7 @@ def main():
 
         tweets += f" {news_url}"
 
-        logging.info(job_execution_count,'||',tweets)
+        logging.info(f"{job_execution_count}",'||',tweets)
 
         post_tweet(auth=auth,text=tweets)
 
