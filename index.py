@@ -26,7 +26,7 @@ def reset_job_counter():
     logging.info("Job execution count reset at", datetime.datetime.now())
 
 def main():
-    global job_execution_count
+    global job_execution_count,news_posted
     if job_execution_count < max_job_executions:
         logging.info(f"TASK: {job_execution_count}")
 
@@ -47,7 +47,6 @@ def main():
                 cnt+=1
                 time.sleep(0.8)
 
-        global news_posted
         news_posted.append(news_title)
         news_title=news.get("articles")[job_execution_count+cnt].get("title")
         new_description=news.get("articles")[job_execution_count+cnt].get("description")
