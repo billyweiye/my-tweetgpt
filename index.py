@@ -7,7 +7,17 @@ from tweetgpt import generate_tweet
 from tweet import post_tweet 
 import logging 
 
+
+def get_headlines(country,category,topic,apikey):
+    #top headline endpoint
+    url=f"https://newsapi.org/v2/top-headlines?country={country}&category={category}&q={topic}&apiKey={apikey}"
+
+    response = requests.get(url)
+
+    return response.json()
+
 def get_news(topic, date, sort_type, apikey):
+    #everything endpoint
     url = f"https://newsapi.org/v2/everything?q={topic}&from={date}&sortBy={sort_type}&apiKey={apikey}&language=en"
 
     response = requests.get(url)
@@ -31,9 +41,11 @@ def main():
         logging.info(f"TASK: {job_execution_count}")
 
         #get news list
-        kw='China'
-        sort_type = "relevancy"
-        news=get_news(topic=kw, date=date, sort_type=sort_type, apikey=apikey)
+        # kw='China'
+        # sort_type = "relevancy"
+        # news=get_news(topic=kw, date=date, sort_type=sort_type, apikey=apikey)
+
+        news=get_headlines(country='us',apikey=apikey)
 
         cnt=0
         while True:
