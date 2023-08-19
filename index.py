@@ -94,8 +94,8 @@ def schedule_job():
     scheduler_us.every().day.at("00:00").do(reset_job_counter)
 
     # Schedule the job to run every 10 to 48 minutes between 8 am and 10 pm
-    scheduler_cn.every(10).to(25).minutes.do(main,country='cn',timezone=cn_timezone,language="Simplified Chinese")
-    scheduler_us.every(10).to(25).minutes.do(main,country='us',timezone=us_timezone,language='English')
+    scheduler_cn.every(5).to(40).minutes.do(main,country='cn',timezone=cn_timezone,language="Simplified Chinese")
+    scheduler_us.every(10).to(30).minutes.do(main,country='us',timezone=us_timezone,language='English')
 
     # 定义一个函数来运行调度器
     def run_scheduler(scheduler):
