@@ -75,7 +75,7 @@ def main(country,language,timezone):
 
         tweets += f" {news_url}"
 
-        logging.info(f"{job_execution_count}",'||',tweets)
+        logging.info(f"TASK: {job_execution_count} || {tweets}")
 
         if tweets:
             post_tweet(auth=auth,text=tweets)
