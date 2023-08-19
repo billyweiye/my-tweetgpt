@@ -45,7 +45,7 @@ def main():
         # sort_type = "relevancy"
         # news=get_news(topic=kw, date=date, sort_type=sort_type, apikey=apikey)
 
-        news=get_headlines(country='us',apikey=apikey)
+        news=get_headlines(country='us',category='',topic='',apikey=apikey)
 
         cnt=0
         while True:
