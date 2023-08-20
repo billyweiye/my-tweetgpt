@@ -6,12 +6,12 @@ import time
 from tweetgpt import generate_tweet
 from tweet import post_tweet 
 import logging 
-from news import get_headlines
+from news import nyt_newswire
 import threading
 
 # Counter to keep track of job executions
 job_execution_count_initial = 0
-max_job_executions = 10
+max_job_executions = 30
 news_posted=[]
 # Counter to keep track of job executions
 # 创建线程本地存储对象
@@ -39,7 +39,7 @@ def main(country,language,timezone):
     # 将当前时间设置为目标时区的时间
     target_time = current_time.astimezone(timezone)
     # 限制任务时间 
-    if target_time.hour < 8 or target_time.hour > 23:
+    if target_time.hour < 7 or target_time.hour > 23:
         return
 
     if job_execution_count < max_job_executions:
@@ -50,14 +50,16 @@ def main(country,language,timezone):
         # sort_type = "relevancy"
         # news=get_news(topic=kw, date=date, sort_type=sort_type, apikey=apikey)
 
-        news=get_headlines(country=country,category='',topic='',apikey=apikey)
+       # news=get_headlines(country=country,category='',topic='',apikey=apikey)
+
+        news=nyt_newswire(apikey=apikey,source='all',sector='business',limit=40)
 
         cnt=0
         while True:
-            news_title=news.get("articles")[job_execution_count+cnt].get("title")
+            news_title=news[cnt].get("title")
             if news_title not in news_posted :
                 break
-            elif cnt>=max_job_executions:
+            elif cnt>=max_job_executions or cnt>=len(news):
                 set_job_execution_count(max_job_executions)
                 return
             else:
@@ -65,9 +67,9 @@ def main(country,language,timezone):
                 time.sleep(0.8)
 
         news_posted.append(news_title)
-        news_title=news.get("articles")[job_execution_count+cnt].get("title")
-        new_description=news.get("articles")[job_execution_count+cnt].get("description")
-        news_url=news.get("articles")[job_execution_count+cnt].get("url")
+       # news_title=news.get("articles")[job_execution_count+cnt].get("title")
+        new_description=news[cnt].get("abstract")
+        news_url=news[cnt].get("url")
 
         prompts=f"title:{news_title} || description:{new_description}"
 
@@ -95,7 +97,7 @@ def schedule_job():
 
     # Schedule the job to run every 10 to 48 minutes between 8 am and 10 pm
     scheduler_cn.every(5).to(40).minutes.do(main,country='cn',timezone=cn_timezone,language="Simplified Chinese")
-    scheduler_us.every(10).to(30).minutes.do(main,country='us',timezone=us_timezone,language='English')
+    scheduler_us.every(5).to(30).minutes.do(main,country='us',timezone=us_timezone,language='English')
 
     # 定义一个函数来运行调度器
     def run_scheduler(scheduler):
@@ -112,11 +114,11 @@ def schedule_job():
     thread_us = threading.Thread(target=run_scheduler, args=(scheduler_us,))
     
     # 启动线程
-    thread_cn.start()
+#    thread_cn.start()
     thread_us.start()
 
     # 等待线程结束
-    thread_cn.join()
+#    thread_cn.join()
     thread_us.join()
 
 
@@ -133,7 +135,7 @@ if __name__ == "__main__":
     config = configparser.ConfigParser()
     config.read('config.ini')
 
-    apikey=config['news']['api_key']
+    apikey=config['news']['nyt_key']
 
     openai_api_key=config['openai']["openai_api_key"]
 
