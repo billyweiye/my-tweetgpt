@@ -88,15 +88,15 @@ def main(country,language,timezone):
 
 def schedule_job():
     # 创建任务和调度器
-    scheduler_cn = schedule.Scheduler()
+ #   scheduler_cn = schedule.Scheduler()
     scheduler_us = schedule.Scheduler()
 
     # Schedule the job to reset the counter every day at midnight
-    scheduler_cn.every().day.at("00:00").do(reset_job_counter)
+ #   scheduler_cn.every().day.at("00:00").do(reset_job_counter)
     scheduler_us.every().day.at("00:00").do(reset_job_counter)
 
     # Schedule the job to run every 10 to 48 minutes between 8 am and 10 pm
-    scheduler_cn.every(5).to(40).minutes.do(main,country='cn',timezone=cn_timezone,language="Simplified Chinese")
+ #   scheduler_cn.every(5).to(40).minutes.do(main,country='cn',timezone=cn_timezone,language="Simplified Chinese")
     scheduler_us.every(5).to(30).minutes.do(main,country='us',timezone=us_timezone,language='English')
 
     # 定义一个函数来运行调度器
@@ -110,7 +110,7 @@ def schedule_job():
                 time.sleep(300)
 
     # 创建两个线程来并行执行任务
-    thread_cn = threading.Thread(target=run_scheduler, args=(scheduler_cn,))
+ #   thread_cn = threading.Thread(target=run_scheduler, args=(scheduler_cn,))
     thread_us = threading.Thread(target=run_scheduler, args=(scheduler_us,))
     
     # 启动线程
