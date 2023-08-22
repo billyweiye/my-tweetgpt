@@ -30,7 +30,7 @@ def get_job_execution_count():
 
 def reset_job_counter():
     set_job_execution_count(job_execution_count=job_execution_count_initial)
-    logging.info("Job execution count reset at", datetime.datetime.now())
+    logging.info(f"Job execution count reset at {datetime.datetime.now()}")
 
 def main(country,language,timezone):
     global news_posted
