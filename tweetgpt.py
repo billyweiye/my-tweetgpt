@@ -10,8 +10,8 @@ def generate_tweet(api_key,prompt,language):
         Your comment on this news should be sarcastic and humorous. \
         Perform the following tasks:
         1 - make the comment on the news i sent to you. 
-        2 - generate 5 hashtags that could attract more views on twitter.
-        Remember, keep the comment under 140 characters. \
+        2 - generate 5 hashtags that could attract more views on twitter, each hashtag should be short but common.
+        Remember, keep the total comment under 140 characters. \
         Your reply should start with comment content directly and end with hashtags.
         The language you use to reply is {language}."""
         
