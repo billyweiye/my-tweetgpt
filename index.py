@@ -96,8 +96,10 @@ def schedule_job():
     scheduler_us.every().day.at("00:00",us_timezone).do(reset_job_counter)
 
     # Schedule the job to run every 10 to 48 minutes between 8 am and 10 pm
+    min_interval=5
+    max_interval=30
  #   scheduler_cn.every(5).to(40).minutes.do(main,country='cn',timezone=cn_timezone,language="Simplified Chinese")
-    scheduler_us.every(5).to(30).minutes.do(main,country='us',timezone=us_timezone,language='English')
+    scheduler_us.every(min_interval).to(max_interval).minutes.do(main,country='us',timezone=us_timezone,language='English')
 
     # 定义一个函数来运行调度器
     def run_scheduler(scheduler):
@@ -105,7 +107,7 @@ def schedule_job():
             try:
                 logging.info(f"{threading.current_thread().name},Next Run at: {scheduler.next_run}")
                 scheduler.run_pending()
-                time.sleep(45)  # Sleep for a second to avoid high CPU usage
+                time.sleep(min_interval*6)  # Sleep for a second to avoid high CPU usage
             except Exception as e:
                 logging.error("An unexpected error occurred: %s", e)
                 time.sleep(300)
