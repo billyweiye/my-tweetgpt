@@ -92,8 +92,8 @@ def schedule_job():
     scheduler_us = schedule.Scheduler()
 
     # Schedule the job to reset the counter every day at midnight
- #   scheduler_cn.every().day.at("00:00").do(reset_job_counter)
-    scheduler_us.every().day.at("00:00").do(reset_job_counter)
+ #   scheduler_cn.every().day.at("00:00",us_timezone).do(reset_job_counter)
+    scheduler_us.every().day.at("00:00",us_timezone).do(reset_job_counter)
 
     # Schedule the job to run every 10 to 48 minutes between 8 am and 10 pm
  #   scheduler_cn.every(5).to(40).minutes.do(main,country='cn',timezone=cn_timezone,language="Simplified Chinese")
@@ -103,15 +103,17 @@ def schedule_job():
     def run_scheduler(scheduler):
         while True:
             try:
+                logging.info(f"{threading.current_thread().name},Next Run at: {scheduler.next_run}")
                 scheduler.run_pending()
-                time.sleep(1)  # Sleep for a second to avoid high CPU usage
+                time.sleep(45)  # Sleep for a second to avoid high CPU usage
             except Exception as e:
                 logging.error("An unexpected error occurred: %s", e)
                 time.sleep(300)
 
     # 创建两个线程来并行执行任务
- #   thread_cn = threading.Thread(target=run_scheduler, args=(scheduler_cn,))
-    thread_us = threading.Thread(target=run_scheduler, args=(scheduler_us,))
+ #   thread_cn = threading.Thread(target=run_scheduler, args=(scheduler_cn,),name="CHINA")
+    thread_us = threading.Thread(target=run_scheduler, args=(scheduler_us,),name="USA")
+    threading.current_thread()
     
     # 启动线程
 #    thread_cn.start()
