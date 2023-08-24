@@ -6,7 +6,7 @@ import time
 from tweetgpt import generate_tweet
 from tweet import post_tweet 
 import logging 
-from news import nyt_newswire
+from news import newsdata
 import threading
 
 # Counter to keep track of job executions
@@ -52,7 +52,7 @@ def main(country,language,timezone):
 
        # news=get_headlines(country=country,category='',topic='',apikey=apikey)
 
-        news=nyt_newswire(apikey=apikey,source='all',sector='business',limit=40)
+        news=newsdata(apikey,timeframe=1,language="en",q="Politics OR Finance OR Stock Market OR Technology OR Science")
 
         cnt=0
         while True:
@@ -139,7 +139,7 @@ if __name__ == "__main__":
     config = configparser.ConfigParser()
     config.read('config.ini')
 
-    apikey=config['news']['nyt_key']
+    apikey=config['news']['newsdata_key']
 
     openai_api_key=config['openai']["openai_api_key"]
 

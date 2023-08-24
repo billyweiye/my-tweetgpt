@@ -35,10 +35,12 @@ def nyt_newswire(apikey,source='all',sector='all',limit=20):
 
   return result
 
-def newsdata(apikey,timeframe,language,q="Politics OR Finance OR Stock Market",category):
-  import requests
-
+def newsdata(apikey,timeframe,language,q="Politics OR Finance OR Stock Market"):
   url = f"https://newsdata.io/api/1/news?apikey={apikey}&timeframe={timeframe}&language={language}&q={q}"
+  def get_next_page(url,page):
+    url+=f"&page={page}"
+    res = requests.get(url, headers=headers, data=payload)
+    return res
 
   payload = {}
   headers =  {
@@ -47,10 +49,20 @@ def newsdata(apikey,timeframe,language,q="Politics OR Finance OR Stock Market",c
 
   response = requests.get(url, headers=headers, data=payload)
 
+  cnt_result=response.json().get("totalResults")//10 +1 if response.json().get("totalResults")%10 !=0 else response.json().get("totalResults")//10
+  next_page=response.json().get("nextPage")
+  all_pages=[]
+  all_pages.append(response.json().get('results'))
+  for page in range(cnt_result): 
+     next_page_result=get_next_page(url,next_page).json()
+     all_pages.append(next_page_result.get('results'))
+     next_page=next_page_result.get('nextPage')
+
   keys_to_get=['description','title','link']
   result=[] 
-  for i in response.json().get('results'):
-    result.append({key: i[key] for key in keys_to_get if key in i})
+  for page in all_pages:
+    for i in page:
+      result.append({key: i[key] for key in keys_to_get if key in i})
 
   return result
 
