@@ -35,6 +35,26 @@ def nyt_newswire(apikey,source='all',sector='all',limit=20):
 
   return result
 
+def newsdata(apikey,timeframe,language,q="Politics OR Finance OR Stock Market",category):
+  import requests
+
+  url = f"https://newsdata.io/api/1/news?apikey={apikey}&timeframe={timeframe}&language={language}&q={q}"
+
+  payload = {}
+  headers =  {
+    "Accept": "application/json"
+  }
+
+  response = requests.get(url, headers=headers, data=payload)
+
+  keys_to_get=['description','title','link']
+  result=[] 
+  for i in response.json().get('results'):
+    result.append({key: i[key] for key in keys_to_get if key in i})
+
+  return result
+
+
 
 
 sector={
