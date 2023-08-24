@@ -77,7 +77,7 @@ def main(country,language,timezone):
                     cnt+=1
                     time.sleep(0.8)
             else:
-                news=newsdata(apikey,timeframe=1,language="en",q="Politics OR Finance OR Stock Market OR Technology OR Science")
+                news=newsdata(apikey,timeframe=2,language="en",q="Politics OR Finance OR Stock Market OR Technology OR Science")
                 save_news_list(news)
                 cnt=0
                 time.sleep(0.8)

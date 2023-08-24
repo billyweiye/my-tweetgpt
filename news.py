@@ -50,7 +50,7 @@ def newsdata(apikey,timeframe,language,q="Politics OR Finance OR Stock Market"):
 
   response = requests.get(url, headers=headers, data=payload)
 
-  cnt_result=int(response.json().get("totalResults"))//10 +1 if int(response.json().get("totalResults"))%10 !=0 else int(response.json().get("totalResults"))//10
+  cnt_result=response.json().get("totalResults")//10 +1 if response.json().get("totalResults")%10 !=0 else response.json().get("totalResults")//10
 
   next_page=response.json().get("nextPage")
   all_pages=[]
