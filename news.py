@@ -47,7 +47,7 @@ def newsdata(apikey,timeframe,language,q="Politics OR Finance OR Stock Market",c
 
   response = requests.get(url, headers=headers, data=payload)
 
-  keys_to_get=['description','title','url']
+  keys_to_get=['description','title','link']
   result=[] 
   for i in response.json().get('results'):
     result.append({key: i[key] for key in keys_to_get if key in i})
