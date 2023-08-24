@@ -1,4 +1,5 @@
 import requests
+import time
 
 def get_headlines(country,category,topic,apikey):
     #top headline endpoint
@@ -49,7 +50,8 @@ def newsdata(apikey,timeframe,language,q="Politics OR Finance OR Stock Market"):
 
   response = requests.get(url, headers=headers, data=payload)
 
-  cnt_result=response.json().get("totalResults")//10 +1 if response.json().get("totalResults")%10 !=0 else response.json().get("totalResults")//10
+  cnt_result=int(response.json().get("totalResults"))//10 +1 if int(response.json().get("totalResults"))%10 !=0 else int(response.json().get("totalResults"))//10
+
   next_page=response.json().get("nextPage")
   all_pages=[]
   all_pages.append(response.json().get('results'))
@@ -57,6 +59,7 @@ def newsdata(apikey,timeframe,language,q="Politics OR Finance OR Stock Market"):
      next_page_result=get_next_page(url,next_page).json()
      all_pages.append(next_page_result.get('results'))
      next_page=next_page_result.get('nextPage')
+     time.sleep(1)
 
   keys_to_get=['description','title','link']
   result=[] 

@@ -28,6 +28,16 @@ def get_job_execution_count():
         local_data.job_execution_count = job_execution_count_initial
     return local_data.job_execution_count
 
+def save_news_list(news_list):
+    local_data.news_list = news_list
+    
+
+# 获取线程本地存储中的全局变量字典
+def get_news_list():
+    if not hasattr(local_data, 'news_list'):
+        local_data.news_list = ""
+    return local_data.news_list
+
 def reset_job_counter():
     set_job_execution_count(job_execution_count=job_execution_count_initial)
     logging.info(f"Job execution count reset at {datetime.datetime.now()}")
@@ -51,25 +61,31 @@ def main(country,language,timezone):
         # news=get_news(topic=kw, date=date, sort_type=sort_type, apikey=apikey)
 
        # news=get_headlines(country=country,category='',topic='',apikey=apikey)
-
-        news=newsdata(apikey,timeframe=1,language="en",q="Politics OR Finance OR Stock Market OR Technology OR Science")
-
+        news=get_news_list()
         cnt=0
         while True:
-            news_title=news[cnt].get("title")
-            if news_title not in news_posted :
-                break
-            elif cnt>=max_job_executions or cnt>=len(news):
-                set_job_execution_count(max_job_executions)
-                return
+            if news:
+                news_title=news[cnt].get("title")
+                if news_title not in news_posted :
+                    break
+                elif cnt>=len(news):
+                    news=newsdata(apikey,timeframe=1,language="en",q="Politics OR Finance OR Stock Market OR Technology OR Science")
+                    save_news_list(news)
+                    cnt=0
+                    time.sleep(60)
+                else:
+                    cnt+=1
+                    time.sleep(0.8)
             else:
-                cnt+=1
+                news=newsdata(apikey,timeframe=1,language="en",q="Politics OR Finance OR Stock Market OR Technology OR Science")
+                save_news_list(news)
+                cnt=0
                 time.sleep(0.8)
 
         news_posted.append(news_title)
        # news_title=news.get("articles")[job_execution_count+cnt].get("title")
         new_description=news[cnt].get("abstract")
-        news_url=news[cnt].get("url")
+        news_url=news[cnt].get("link")
 
         prompts=f"title:{news_title} || description:{new_description}"
 
