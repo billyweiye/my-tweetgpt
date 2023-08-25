@@ -68,7 +68,7 @@ def main(country,language,timezone):
                 news_title=news[cnt].get("title")
                 if news_title not in news_posted :
                     break
-                elif cnt>=len(news):
+                elif cnt>=len(news)-1:
                     news=newsdata(apikey,timeframe=3,language="en",q="Politics OR Finance OR Stock Market OR Technology OR Science")
                     save_news_list(news)
                     cnt=0
