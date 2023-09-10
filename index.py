@@ -99,12 +99,15 @@ def tweet_job(min_tweet_interval,max_tweet_interval,language,timezone):
                 news_url=news.get("link")
 
                 #调用GPT 生成content
-                prompts=f"title:{news_title} || description:{new_description}"
-                logging.info(f"Prompts:{prompts}")
-                tweets=generate_tweet(openai_api_key,prompts,language)
-                
-                #加上news link
-                tweets += f" {news_url}"
+                if 'youtube' not in news_url:
+                    prompts=f"title:{news_title} || description:{new_description}"
+                    logging.info(f"Prompts:{prompts}")
+                    tweets=generate_tweet(openai_api_key,prompts,language)
+                    
+                    #加上news link
+                    tweets += f" {news_url}"
+                else:  #youtube content  post directly
+                    tweets = f"{new_description} {news_url}"
 
                 logging.info(f"TASK: {job_execution_count} || {tweets}")
 
