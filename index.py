@@ -109,8 +109,7 @@ def tweet_job(min_tweet_interval,max_tweet_interval,language,timezone):
                 logging.info(f"TASK: {job_execution_count} || {tweets}")
 
                 if tweets:
-            #        post_tweet(auth=auth,text=tweets)
-                    pass
+                    post_tweet(auth=auth,text=tweets)
 
                 set_job_execution_count(job_execution_count + 1)
 
