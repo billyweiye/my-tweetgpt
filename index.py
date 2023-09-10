@@ -59,7 +59,7 @@ def news_queue(mins_interval:int =1,catogery:list = [],publish_time:int=60):
             news=get_feeds(urls,publish_time)
             for feed in news:
                 put_unique_message(my_queue,feed)
-            logging.info(f"The Current Queue: {my_queue.queue}")
+            logging.info(f"The Current Queue Size: {len(my_queue.queue)}")
             time.sleep(mins_interval*60)
         except Exception as e:
             logging.error(f"Error occured in {threading.current_thread()}: {e}")
@@ -182,7 +182,7 @@ if __name__ == "__main__":
     min_tweet_interval=1.5 
     max_tweet_interval=5
     language_to_tweet="English"
-    rss_category=["Tech"]
+    rss_category=["Tech","News"]
 
 
     schedule_job(news_req_interval,rss_category,publish_time_limt,min_tweet_interval,max_tweet_interval,language_to_tweet,us_timezone)
