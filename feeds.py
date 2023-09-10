@@ -41,7 +41,7 @@ def get_feeds(rss_source:list=[],publish_limit:int = 60):
             response = feedparser.parse(rss_url)
             for entry in response.get('entries',[]):
                 if time.mktime(entry.get("published_parsed",time.strptime("2020-09-09 19:00:00", "%Y-%m-%d %H:%M:%S")))< time.mktime(time.gmtime())-publish_limit*60: #只看publish_limit分钟内发布的内容
-                    print(f"{rss.get('text')}:out-to-date news")
+                   # print(f"{rss.get('text')}:out-to-date news")
                     break
                 elif entry.get("id") not in waitlist:
                     summary_raw = entry.get("summary")
@@ -63,7 +63,7 @@ def get_feeds(rss_source:list=[],publish_limit:int = 60):
                         "description":summary_text
                     })
 
-                    print(f"{rss.get('text')} \n {entry.get('title')}")
+                 #   print(f"{rss.get('text')} \n {entry.get('title')}")
                     break
                 else:
                     break
