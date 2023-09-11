@@ -161,6 +161,9 @@ if __name__ == "__main__":
     log_formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     log_handler.setFormatter(log_formatter)
 
+    # 添加处理器到记录器
+    logger.addHandler(log_handler)
+
 
     # 读取配置文件
     config = configparser.ConfigParser()
