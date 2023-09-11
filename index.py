@@ -6,7 +6,7 @@ import time
 from tweetgpt import generate_tweet
 from tweet import post_tweet 
 import logging 
-from news import newsdata
+from logging.handlers import TimedRotatingFileHandler
 import threading
 import queue
 from feeds import get_rss_urls,get_feeds
@@ -27,7 +27,7 @@ def get_job_execution_count():
 
 def reset_job_counter():
     set_job_execution_count(job_execution_count=0)
-    logging.info(f"Job execution count reset at {datetime.datetime.now()}")
+    logger.info(f"Job execution count reset at {datetime.datetime.now()}")
 
 
     
@@ -48,9 +48,9 @@ def put_unique_message(queue_obj, message):
     # 检查队列中是否已经存在相同的消息
     if message not in queue_obj.queue:
         queue_obj.put(message)
-        logging.info(f"Inserted unique message: {message}")
+        logger.info(f"Inserted unique message: {message}")
     else:
-        logging.info(f"Message already exists in the queue: {message}")
+        logger.info(f"Message already exists in the queue: {message}")
 
 def news_queue(mins_interval:int =1,catogery:list = [],publish_time:int=60):
     while True:
@@ -59,10 +59,10 @@ def news_queue(mins_interval:int =1,catogery:list = [],publish_time:int=60):
             news=get_feeds(urls,publish_time)
             for feed in news:
                 put_unique_message(my_queue,feed)
-            logging.info(f"The Current Queue Size: {len(my_queue.queue)}")
+            logger.info(f"The Current Queue Size: {len(my_queue.queue)}")
             time.sleep(mins_interval*60)
         except Exception as e:
-            logging.error(f"Error occured in {threading.current_thread()}: {e}")
+            logger.error(f"Error occured in {threading.current_thread()}: {e}")
 
 
 def get_feed_queue():
@@ -80,12 +80,12 @@ def tweet_job(min_tweet_interval,max_tweet_interval,language,timezone):
             target_time = current_time.astimezone(timezone)
             # 限制任务时间 
             if target_time.hour < 7 or target_time.hour > 23:
-                logging.info("Not Scheduled time. Wait another 10 mins.")
+                logger.info("Not Scheduled time. Wait another 10 mins.")
                 time.wait(10*60)   #等待10分钟
                 continue
 
             if job_execution_count < max_job_executions:
-                logging.info(f"TASK: {job_execution_count}")
+                logger.info(f"TASK: {job_execution_count}")
 
                 news=get_feed_queue()
                 news_id=news.get("id")
@@ -101,7 +101,7 @@ def tweet_job(min_tweet_interval,max_tweet_interval,language,timezone):
                 #调用GPT 生成content
                 if 'youtube' not in news_url:
                     prompts=f"title:{news_title} || description:{new_description}"
-                    logging.info(f"Prompts:{prompts}")
+                    logger.info(f"Prompts:{prompts}")
                     tweets=generate_tweet(openai_api_key,prompts,language)
                     
                     #加上news link
@@ -109,7 +109,7 @@ def tweet_job(min_tweet_interval,max_tweet_interval,language,timezone):
                 else:  #youtube content  post directly
                     tweets = f"{new_description} {news_url}"
 
-                logging.info(f"TASK: {job_execution_count} || {tweets}")
+                logger.info(f"TASK: {job_execution_count} || {tweets}")
 
                 if tweets:
                     post_tweet(auth=auth,text=tweets)
@@ -121,7 +121,7 @@ def tweet_job(min_tweet_interval,max_tweet_interval,language,timezone):
             else:
                 time.sleep(30*60)
         except Exception as e:
-            logging.error(f"Error occured in {threading.current_thread()}: {e}")
+            logger.error(f"Error occured in {threading.current_thread()}: {e}")
 
 
 
@@ -148,12 +148,19 @@ def schedule_job(news_req_interval:int=1,category:list=[],publish_time:int=60,mi
 
 
 if __name__ == "__main__":
-    # 配置日志输出的格式
-    logging.basicConfig(
-        filename='app.log', level=logging.INFO,  # 设置日志级别，可选的级别有 DEBUG, INFO, WARNING, ERROR, CRITICAL
-        format="%(asctime)s - %(levelname)s - %(message)s",
-        datefmt="%Y-%m-%d %H:%M:%S"
-    )
+    # 配置日志记录器
+    logger = logging.getLogger(__name__)
+    logger.setLevel(logging.INFO)
+
+    # 创建 TimedRotatingFileHandler，每 2 小时滚动一次日志文件
+    log_handler = TimedRotatingFileHandler('app.log', when='H', interval=2, backupCount=3)
+    log_handler.setLevel(logging.DEBUG)
+
+
+    # 配置日志格式
+    log_formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    log_handler.setFormatter(log_formatter)
+
 
     # 读取配置文件
     config = configparser.ConfigParser()
