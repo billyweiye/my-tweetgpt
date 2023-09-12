@@ -39,7 +39,7 @@ def post_tweet(auth={},text=""):
     )
 
     if response.status_code != 201:
-        if response.status_code != 429: #too many requests
+        if response.status_code == 429: #too many requests
             return "Too many requests"
         else:
             raise Exception(
