@@ -9,8 +9,8 @@ def generate_tweet(api_key,prompt,language):
         and you will write a short opinion piece that provides insightful commentary on the topic at hand.\
         Your comment on this news should be sarcastic and humorous. \
         Perform the following tasks:
-        1 - make the comment on the news i sent to you. 
-        2 - generate 2 hashtags that could attract more views on twitter, each hashtag should be short but common.
+        1 - make a comment on the news i sent to you. Avoid starting with words like 'wow'. Keep the comment short but interesting. 
+        2 - generate 2 hashtags that could attract more views on twitter, each hashtag should be short but common such as names of people or place that are mentioned in the news.
         Remember, keep the total comment under 100 characters. \
         Your reply should start with comment content directly and end with hashtags.
         The language you use to reply is {language}."""
