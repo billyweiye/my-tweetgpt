@@ -49,8 +49,8 @@ def put_unique_message(queue_obj, message):
     if message not in queue_obj.queue:
         queue_obj.put(message)
         logger.info(f"Inserted unique message: {message}")
-    else:
-        logger.info(f"Message already exists in the queue: {message}")
+    #else:
+     #   logger.info(f"Message already exists in the queue: {message}")
 
 def news_queue(mins_interval:int =1,catogery:list = [],publish_time:int=60):
     while True:
@@ -115,7 +115,7 @@ def tweet_job(min_tweet_interval,max_tweet_interval,language,timezone):
                     post_result=post_tweet(auth=auth,text=tweets)
                     logger.info("Response mesg: {} {}".format(post_result.status_code,post_result.text))
                     if post_result.status_code == 429: #too many requests
-                        logger.info("TOO MANY REQUESTS. WAIT!!")
+                        logger.debug("TOO MANY REQUESTS. WAIT!!")
                         time.sleep(3*60*60) #wait for 3 hours to continue if the api has reached the limit
                         continue
                     elif post_result.status_code != 201:
