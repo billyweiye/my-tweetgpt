@@ -189,8 +189,8 @@ if __name__ == "__main__":
     new_category=["Tech"]
     news_req_interval=1  #每1分钟检查一次rss
     publish_time_limt=60
-    min_tweet_interval=1.5 
-    max_tweet_interval=5
+    min_tweet_interval=5 
+    max_tweet_interval=30
     language_to_tweet="English"
     rss_category=["Tech","News"]
 
