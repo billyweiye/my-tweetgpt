@@ -14,6 +14,7 @@
 			<outline htmlUrl="https://www.theverge.com/energy" xmlUrl="https://www.theverge.com/rss/energy/index.xml" version="RSS" type="rss" title="The Verge - Energies" text="The Verge - Energies"/>
 			<outline htmlUrl="https://dbaplus.cn" xmlUrl="https://rsshub.app/dbaplus" version="RSS" type="rss" title="全部 - dbaplus社群" text="全部 - dbaplus社群"/>
 			<outline htmlUrl="https://www.mckinsey.com/" xmlUrl="https://www.mckinsey.com/insights/rss" version="RSS" type="rss" title="McKinsey Insights &amp; Publications" text="McKinsey Insights &amp; Publications"/>
+			<outline htmlUrl="https://developer.salesforce.com/blogs" xmlUrl="https://developer.salesforce.com/blogs/feed" version="RSS" type="rss" title="Salesforce Developers Blog" text="Salesforce Developers Blog"/>
 		</outline>
 		<outline title="Coding" text="Coding">
 			<outline htmlUrl="https://hacks.mozilla.org/" xmlUrl="https://hacks.mozilla.org/feed/" version="RSS" type="rss" title="Mozilla Hacks – the Web developer blog" text="Mozilla Hacks – the Web developer blog"/>
@@ -32,7 +33,6 @@
 			<outline htmlUrl="https://medium.com/airbnb-engineering/tagged/data-science?source=rss----53c7c27702d5--data_science" xmlUrl="https://medium.com/feed/airbnb-engineering/tagged/data-science" version="RSS" type="rss" title="Data Science in The Airbnb Tech Blog on Medium" text="Data Science in The Airbnb Tech Blog on Medium"/>
 			<outline htmlUrl="https://eng.lyft.com/tagged/data-science?source=rss----25cd379abb8--data_science" xmlUrl="https://medium.com/feed/lyft-engineering/tagged/data-science" version="RSS" type="rss" title="Data Science in Lyft Engineering on Medium" text="Data Science in Lyft Engineering on Medium"/>
 			<outline htmlUrl="https://blogs.sas.com/content/subconsciousmusings/" xmlUrl="https://blogs.sas.com/content/subconsciousmusings/feed/" version="RSS" type="rss" title="The SAS Data Science Blog" text="The SAS Data Science Blog"/>
-			<outline htmlUrl="https://www.youtube.com/channel/UC79Gv3mYp6zKiSwYemEik9A" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC79Gv3mYp6zKiSwYemEik9A" version="RSS" type="rss" title="DataCamp" text="DataCamp"/>
 		</outline>
 		<outline title="Invest" text="Invest">
 			<outline htmlUrl="https://www.valuewalk.com" xmlUrl="http://www.valuewalk.com/feed/" version="RSS" type="rss" title="ValueWalk" text="ValueWalk"/>
@@ -83,6 +83,9 @@
 			<outline htmlUrl="https://www.washingtonpost.com" xmlUrl="http://feeds.washingtonpost.com/rss/business/technology" version="RSS" type="rss" title="Washington Post" text="Washington Post"/>
 			<outline htmlUrl="https://www.youtube.com/channel/UCrM7B7SL_g1edFOnmj-SDKg" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCrM7B7SL_g1edFOnmj-SDKg" version="RSS" type="rss" title="Bloomberg Technology" text="Bloomberg Technology"/>
 			<outline htmlUrl="https://www.scmp.com/rss/36/feed" xmlUrl="http://www.scmp.com/rss/36/feed" version="RSS" type="rss" title="Tech - South China Morning Post" text="Tech - South China Morning Post"/>
+			<outline htmlUrl="https://www.youtube.com/channel/UCddiUEpeqJcYeBxX1IVBKvQ" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCddiUEpeqJcYeBxX1IVBKvQ" version="RSS" type="rss" title="The Verge" text="The Verge"/>
+			<outline htmlUrl="https://www.youtube.com/channel/UCBJycsmduvYEL83R_U4JriQ" xmlUrl="https://www.youtube.com/feeds/videos.xml?user=MarquesBrownlee" version="RSS" type="rss" title="Marques Brownlee" text="Marques Brownlee"/>
+			<outline htmlUrl="https://www.youtube.com/channel/UC-6OW5aJYBFM33zXQlBKPNA" xmlUrl="https://www.youtube.com/feeds/videos.xml?user=Engadget" version="RSS" type="rss" title="Engadget" text="Engadget"/>
 		</outline>
 		<outline title="科技" text="科技">
 			<outline htmlUrl="https://www.qbitai.com" xmlUrl="https://www.qbitai.com/feed" version="RSS" type="rss" title="量子位" text="量子位"/>
