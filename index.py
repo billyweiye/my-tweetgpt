@@ -112,7 +112,13 @@ def tweet_job(min_tweet_interval,max_tweet_interval,language,timezone):
                 logger.info(f"TASK: {job_execution_count} || {tweets}")
 
                 if tweets:
-                    post_tweet(auth=auth,text=tweets)
+                    posst_result=post_tweet(auth=auth,text=tweets)
+                    if posst_result=="Too many requests":
+                        time.wait(3*60*60) #wait for 3 hours to continue if the api has reached the limit
+                        logger.info("TOO MANY REQUESTS. WAIT!!")
+                        continue
+
+                    
 
                 set_job_execution_count(job_execution_count + 1)
 
@@ -122,6 +128,7 @@ def tweet_job(min_tweet_interval,max_tweet_interval,language,timezone):
                 time.sleep(30*60)
         except Exception as e:
             logger.error(f"Error occured in {threading.current_thread()}: {e}")
+            time.sleep(30*60)
 
 
 
