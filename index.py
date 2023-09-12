@@ -81,7 +81,7 @@ def tweet_job(min_tweet_interval,max_tweet_interval,language,timezone):
             # 限制任务时间 
             if target_time.hour < 7 or target_time.hour > 23:
                 logger.info("Not Scheduled time. Wait another 10 mins.")
-                time.wait(10*60)   #等待10分钟
+                time.sleep(10*60)   #等待10分钟
                 continue
 
             if job_execution_count < max_job_executions:
@@ -114,7 +114,7 @@ def tweet_job(min_tweet_interval,max_tweet_interval,language,timezone):
                 if tweets:
                     posst_result=post_tweet(auth=auth,text=tweets)
                     if posst_result=="Too many requests":
-                        time.wait(3*60*60) #wait for 3 hours to continue if the api has reached the limit
+                        time.sleep(3*60*60) #wait for 3 hours to continue if the api has reached the limit
                         logger.info("TOO MANY REQUESTS. WAIT!!")
                         continue
 
