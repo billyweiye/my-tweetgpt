@@ -1,5 +1,4 @@
 from requests_oauthlib import OAuth1Session
-import json
 
 
 # apikey=st.secrets["news_api_key"]
@@ -38,21 +37,13 @@ def post_tweet(auth={},text=""):
         json=payload,
     )
 
-    if response.status_code != 201:
-        if response.status_code == 429: #too many requests
-            return "Too many requests"
-        else:
-            raise Exception(
-                "Request returned an error: {} {}".format(response.status_code, response.text)
-            )
-    else:
-        return "Success"
+    return response
 
-    print("Response code: {}".format(response.status_code))
+    # print("Response code: {}".format(response.status_code))
 
-    # Saving the response as JSON
-    json_response = response.json()
-    print(json.dumps(json_response, indent=4, sort_keys=True))
+    # # Saving the response as JSON
+    # json_response = response.json()
+    # print(json.dumps(json_response, indent=4, sort_keys=True))
 
 
 

@@ -112,13 +112,16 @@ def tweet_job(min_tweet_interval,max_tweet_interval,language,timezone):
                 logger.info(f"TASK: {job_execution_count} || {tweets}")
 
                 if tweets:
-                    posst_result=post_tweet(auth=auth,text=tweets)
-                    if posst_result=="Too many requests":
+                    post_result=post_tweet(auth=auth,text=tweets)
+                    logger.info("Response mesg: {} {}".format(post_result.status_code,post_result.text))
+                    if post_result.status_code == 429: #too many requests
                         time.sleep(3*60*60) #wait for 3 hours to continue if the api has reached the limit
                         logger.info("TOO MANY REQUESTS. WAIT!!")
                         continue
-
-                    
+                    elif post_result.status_code != 201:
+                        raise Exception(
+                            "Request returned an error: {} {}".format(post_result.status_code, post_result.text)
+                        )
 
                 set_job_execution_count(job_execution_count + 1)
 
