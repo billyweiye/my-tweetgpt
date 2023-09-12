@@ -39,9 +39,14 @@ def post_tweet(auth={},text=""):
     )
 
     if response.status_code != 201:
-        raise Exception(
-            "Request returned an error: {} {}".format(response.status_code, response.text)
-        )
+        if response.status_code != 429: #too many requests
+            return "Too many requests"
+        else:
+            raise Exception(
+                "Request returned an error: {} {}".format(response.status_code, response.text)
+            )
+    else:
+        return "Success"
 
     print("Response code: {}".format(response.status_code))
 
