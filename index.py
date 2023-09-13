@@ -203,7 +203,7 @@ if __name__ == "__main__":
     min_tweet_interval=5 
     max_tweet_interval=30
     language_to_tweet="English"
-    rss_category=["Tech","News"]
+    rss_category=["Tech"]
 
 
     schedule_job(news_req_interval,rss_category,publish_time_limt,min_tweet_interval,max_tweet_interval,language_to_tweet,us_timezone)
