@@ -128,6 +128,7 @@ def tweet_job(min_tweet_interval,max_tweet_interval,language,timezone):
                 
                 time.sleep(random.randint(min_tweet_interval*60,max_tweet_interval*60))
             else:
+                logger.debug(f"JOB COUNTS: {job_execution_count} EXCEEDED THE MAX JOB COUNT!!")
                 time.sleep(30*60)
         except Exception as e:
             logger.error(f"Error occured in {threading.current_thread()}: {e}")
