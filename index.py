@@ -80,7 +80,7 @@ def tweet_job(min_tweet_interval,max_tweet_interval,language,timezone):
             target_time = current_time.astimezone(timezone)
             # 限制任务时间 
             if target_time.hour < 7 or target_time.hour > 23:
-                logger.info("Not Scheduled time. Wait another 10 mins.")
+                logger.warning("Not Scheduled time. Wait another 10 mins.")
                 time.sleep(10*60)   #等待10分钟
                 continue
 
@@ -115,7 +115,7 @@ def tweet_job(min_tweet_interval,max_tweet_interval,language,timezone):
                     post_result=post_tweet(auth=auth,text=tweets)
                     logger.info("Response mesg: {} {}".format(post_result.status_code,post_result.text))
                     if post_result.status_code == 429: #too many requests
-                        logger.debug("TOO MANY REQUESTS. WAIT!!")
+                        logger.warning("TOO MANY REQUESTS. WAIT!!")
                         time.sleep(3*60*60) #wait for 3 hours to continue if the api has reached the limit
                         continue
                     elif post_result.status_code != 201:
@@ -128,7 +128,7 @@ def tweet_job(min_tweet_interval,max_tweet_interval,language,timezone):
                 
                 time.sleep(random.randint(min_tweet_interval*60,max_tweet_interval*60))
             else:
-                logger.debug(f"JOB COUNTS: {job_execution_count} EXCEEDED THE MAX JOB COUNT!!")
+                logger.warning(f"JOB COUNTS: {job_execution_count} EXCEEDED THE MAX JOB COUNT!!")
                 time.sleep(30*60)
         except Exception as e:
             logger.error(f"Error occured in {threading.current_thread()}: {e}")
