@@ -25,9 +25,18 @@ def get_job_execution_count():
         local_data.job_execution_count = 0
     return local_data.job_execution_count
 
-def reset_job_counter():
-    set_job_execution_count(job_execution_count=0)
-    logger.info(f"Job execution count reset at {datetime.datetime.now()}")
+def reset_job_counter(timezone='America/New_York'):
+    time_zone=pytz.timezone(timezone)
+    def reset_job():
+        set_job_execution_count(job_execution_count=0)
+        logger.info(f"Job execution count reset at {datetime.datetime.now()}")
+
+    #创建定时任务来重置发推次数上限
+    scheduler = schedule.Scheduler()
+    scheduler.every().day.at("00:00",time_zone).do(reset_job)
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
 
 
     
@@ -71,13 +80,14 @@ def get_feed_queue():
 
 
 def tweet_job(min_tweet_interval,max_tweet_interval,language,timezone):
+    time_zone=pytz.timezone(timezone)
     while True:
         try:
             job_execution_count=get_job_execution_count()
 
             current_time = datetime.datetime.now()
             # 将当前时间设置为目标时区的时间
-            target_time = current_time.astimezone(timezone)
+            target_time = current_time.astimezone(time_zone)
             # 限制任务时间 
             if target_time.hour < 7 or target_time.hour > 23:
                 logger.warning("Not Scheduled time. Wait another 10 mins.")
@@ -136,25 +146,28 @@ def tweet_job(min_tweet_interval,max_tweet_interval,language,timezone):
 
 
 
-def schedule_job(news_req_interval:int=1,category:list=[],publish_time:int=60,min_tweet_interval:int=1,max_tweet_interval:int=10,language_to_tweet:str="English",timezone=pytz.timezone('America/New_York')):
+def schedule_job(news_req_interval:int=1,category:list=[],publish_time:int=60,min_tweet_interval:int=1,max_tweet_interval:int=10,language_to_tweet:str="English",timezone='America/New_York'):
     #创建获取feeds线程
     thread_rss=threading.Thread(target=news_queue,args=(news_req_interval,category,publish_time),name="RSS")
 
-    # 创建两个线程来并行执行任务
-    thread_tweet = threading.Thread(target=tweet_job,args=(min_tweet_interval,max_tweet_interval,language_to_tweet,us_timezone), name="TWEET")
+    # 创建线程来并行执行任务
+    thread_tweet = threading.Thread(target=tweet_job,args=(min_tweet_interval,max_tweet_interval,language_to_tweet,timezone), name="TWEET")
+    
+    #创建重置任务计数线程
+    thread_counter = threading.Thread(target=reset_job_counter,args=(timezone), name="JOB_COUNTER")
     
     # 启动线程
     thread_rss.start()
     thread_tweet.start()
+    thread_counter.start()
     
 
     # 等待线程结束
     thread_rss.join()
     thread_tweet.join()
+    thread_counter.join()
 
-    #创建定时任务来重置发推次数上限
-    scheduler = schedule.Scheduler()
-    scheduler.every().day.at("00:00",us_timezone).do(reset_job_counter)
+
 
 
 
@@ -193,9 +206,7 @@ if __name__ == "__main__":
     max_job_executions = 45
 
     # 指定目标时区
-    us_timezone = pytz.timezone('America/New_York')
-
-    cn_timezone = pytz.timezone('Asia/Shanghai')
+    us_timezone = 'America/New_York'
 
     new_category=["Tech"]
     news_req_interval=1  #每1分钟检查一次rss
