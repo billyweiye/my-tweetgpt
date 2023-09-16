@@ -34,8 +34,13 @@ def reset_job_counter(timezone='America/New_York'):
     #创建定时任务来重置发推次数上限
     scheduler = schedule.Scheduler()
     scheduler.every().day.at("00:00",time_zone).do(reset_job)
+    logger.info(f"{threading.current_thread()}: started reset job count schedule")
     while True:
-        schedule.run_pending()
+        # next_zero_time = datetime.datetime.now().astimezone(time_zone).replace(hour=0, minute=0, second=0, microsecond=0)
+        # next_zero_time = next_zero_time + datetime.timedelta(days=1)
+        # current_time = datetime.datetime.now(time_zone)
+        # wait_time=(next_zero_time-current_time).seconds
+        scheduler.run_pending()
         time.sleep(1)
 
 
