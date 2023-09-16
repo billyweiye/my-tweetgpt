@@ -26,22 +26,25 @@ def get_job_execution_count():
     return local_data.job_execution_count
 
 def reset_job_counter(timezone='America/New_York'):
-    time_zone=pytz.timezone(timezone)
-    def reset_job():
-        set_job_execution_count(job_execution_count=0)
-        logger.info(f"Job execution count reset at {datetime.datetime.now()}")
+    try:
+        time_zone=pytz.timezone(timezone)
+        def reset_job():
+            set_job_execution_count(job_execution_count=0)
+            logger.info(f"Job execution count reset at {datetime.datetime.now()}")
 
-    #创建定时任务来重置发推次数上限
-    scheduler = schedule.Scheduler()
-    scheduler.every().day.at("00:00",time_zone).do(reset_job)
-    logger.info(f"{threading.current_thread()}: started reset job count schedule")
-    while True:
-        # next_zero_time = datetime.datetime.now().astimezone(time_zone).replace(hour=0, minute=0, second=0, microsecond=0)
-        # next_zero_time = next_zero_time + datetime.timedelta(days=1)
-        # current_time = datetime.datetime.now(time_zone)
-        # wait_time=(next_zero_time-current_time).seconds
-        scheduler.run_pending()
-        time.sleep(1)
+        #创建定时任务来重置发推次数上限
+        scheduler = schedule.Scheduler()
+        scheduler.every().day.at("00:00",time_zone).do(reset_job)
+        logger.info(f"{threading.current_thread()}: started reset job count schedule")
+        while True:
+            # next_zero_time = datetime.datetime.now().astimezone(time_zone).replace(hour=0, minute=0, second=0, microsecond=0)
+            # next_zero_time = next_zero_time + datetime.timedelta(days=1)
+            # current_time = datetime.datetime.now(time_zone)
+            # wait_time=(next_zero_time-current_time).seconds
+            scheduler.run_pending()
+            time.sleep(1)
+    except Exception as e:
+        logger.error(f"Error occured in {threading.current_thread()}: {e}")
 
 
     
@@ -153,13 +156,13 @@ def tweet_job(min_tweet_interval,max_tweet_interval,language,timezone):
 
 def schedule_job(news_req_interval:int=1,category:list=[],publish_time:int=60,min_tweet_interval:int=1,max_tweet_interval:int=10,language_to_tweet:str="English",timezone='America/New_York'):
     #创建获取feeds线程
-    thread_rss=threading.Thread(target=news_queue,args=(news_req_interval,category,publish_time),name="RSS")
+    thread_rss=threading.Thread(target=news_queue,args=(news_req_interval,category,publish_time,),name="RSS")
 
     # 创建线程来并行执行任务
-    thread_tweet = threading.Thread(target=tweet_job,args=(min_tweet_interval,max_tweet_interval,language_to_tweet,timezone), name="TWEET")
+    thread_tweet = threading.Thread(target=tweet_job,args=(min_tweet_interval,max_tweet_interval,language_to_tweet,timezone,), name="TWEET")
     
     #创建重置任务计数线程
-    thread_counter = threading.Thread(target=reset_job_counter,args=(timezone), name="JOB_COUNTER")
+    thread_counter = threading.Thread(target=reset_job_counter,args=(timezone,), name="JOB_COUNTER")
     
     # 启动线程
     thread_rss.start()
