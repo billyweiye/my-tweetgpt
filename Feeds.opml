@@ -88,6 +88,7 @@
 			<outline htmlUrl="https://www.qbitai.com" xmlUrl="https://www.qbitai.com/feed" version="RSS" type="rss" title="量子位" text="量子位"/>
 			<outline htmlUrl="https://www.jiqizhixin.com/" xmlUrl="https://www.jiqizhixin.com/rss" version="RSS" type="rss" title="机器之心" text="机器之心"/>
 			<outline htmlUrl="https://technews.tw" xmlUrl="http://technews.tw/feed/" version="RSS" type="rss" title="TechNews 科技新報" text="TechNews 科技新報"/>
+			<outline htmlUrl="https://www.youtube.com/channel/UCKV2yWPB3wn0RTZh3cTD8YA" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCKV2yWPB3wn0RTZh3cTD8YA" version="RSS" type="rss" title="硅谷101" text="硅谷101"/>
 		</outline>
 		<outline title="Travel" text="Travel">
 			<outline htmlUrl="http://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html" xmlUrl="https://travel.state.gov/_res/rss/TAsTWs.xml" version="RSS" type="rss" title="travel.state.gov: Travel Advisories" text="travel.state.gov: Travel Advisories"/>
@@ -108,6 +109,7 @@
 
 " version="RSS" type="rss" title="The Verge -  Transpo Posts" text="The Verge -  Transpo Posts"/>
 			<outline htmlUrl="https://www.youtube.com/channel/UCzz4CoEgSgWNs9ZAvRMhW2A" xmlUrl="https://www.youtube.com/feeds/videos.xml?user=fullychargedshow" version="RSS" type="rss" title="Fully Charged Show" text="Fully Charged Show"/>
+			<outline htmlUrl="https://www.youtube.com/channel/UC2J-0g_nxlwcD9JBK1eTleQ" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC2J-0g_nxlwcD9JBK1eTleQ" version="RSS" type="rss" title="Auto Focus" text="Auto Focus"/>
 		</outline>
 		<outline title="AI" text="AI">
 			<outline htmlUrl="https://engineering.fb.com/" xmlUrl="https://engineering.fb.com/feed/" version="RSS" type="rss" title="Engineering at Meta" text="Engineering at Meta"/>
@@ -122,6 +124,18 @@
 
 
 " version="RSS" type="rss" title="Microsoft Research Blog - Microsoft Research" text="Microsoft Research Blog - Microsoft Research"/>
+		</outline>
+		<outline title="Courses" text="Courses">
+			<outline htmlUrl="https://www.youtube.com/channel/UCBa5G_ESCn8Yd4vw5U-gIcg" xmlUrl="https://www.youtube.com/feeds/videos.xml?user=StanfordOnline" version="RSS" type="rss" title="Stanford Online" text="Stanford Online"/>
+			<outline htmlUrl="https://www.youtube.com/channel/UCYIs6-FlKBiHmvm-_paDLFQ" xmlUrl="https://www.youtube.com/feeds/videos.xml?user=NTUCASE" version="RSS" type="rss" title="臺大科學教育發展中心CASE" text="臺大科學教育發展中心CASE"/>
+			<outline htmlUrl="https://www.youtube.com/channel/UCcabW7890RKJzL968QWEykA" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCcabW7890RKJzL968QWEykA" version="RSS" type="rss" title="CS50" text="CS50"/>
+			<outline htmlUrl="https://www.youtube.com/channel/UCSD0dLRGQk_T-D3RvpM5aFQ" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCSD0dLRGQk_T-D3RvpM5aFQ" version="RSS" type="rss" title="WeAreDevelopers" text="WeAreDevelopers"/>
+			<outline htmlUrl="https://www.youtube.com/channel/UCOjD18EJYcsBog4IozkF_7w" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCOjD18EJYcsBog4IozkF_7w" version="RSS" type="rss" title="PyData" text="PyData"/>
+			<outline htmlUrl="https://www.youtube.com/channel/UCVchfoB65aVtQiDITbGq2LQ" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCVchfoB65aVtQiDITbGq2LQ" version="RSS" type="rss" title="The Full Stack" text="The Full Stack"/>
+			<outline htmlUrl="https://www.youtube.com/channel/UCcIXc5mJsHVYTZR1maL5l9w" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCcIXc5mJsHVYTZR1maL5l9w" version="RSS" type="rss" title="DeepLearningAI" text="DeepLearningAI"/>
+			<outline htmlUrl="https://www.youtube.com/channel/UCPrm9d2hLd_YxSExH7oRyAg" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCPrm9d2hLd_YxSExH7oRyAg" version="RSS" type="rss" title="Dune" text="Dune"/>
+			<outline htmlUrl="https://www.youtube.com/channel/UCp3a0vIbwtVGtMVIfIsKvCQ" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCp3a0vIbwtVGtMVIfIsKvCQ" version="RSS" type="rss" title="ML Collective" text="ML Collective"/>
+			<outline htmlUrl="https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw" version="RSS" type="rss" title="3Blue1Brown" text="3Blue1Brown"/>
 		</outline>
 	</body>
 </opml>
