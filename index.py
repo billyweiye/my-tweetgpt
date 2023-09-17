@@ -30,7 +30,7 @@ def reset_job_counter(timezone='America/New_York'):
         time_zone=pytz.timezone(timezone)
         def reset_job():
             set_job_execution_count(job_execution_count=0)
-            logger.info(f"Job execution count reset at {datetime.datetime.now()}")
+            logger.info(f"Job execution count reset at {datetime.datetime.now()} || Current Job Count is {get_job_execution_count()}")
 
         #创建定时任务来重置发推次数上限
         scheduler = schedule.Scheduler()
@@ -216,13 +216,12 @@ if __name__ == "__main__":
     # 指定目标时区
     us_timezone = 'America/New_York'
 
-    new_category=["Tech"]
     news_req_interval=1  #每1分钟检查一次rss
     publish_time_limt=60
     min_tweet_interval=5 
     max_tweet_interval=30
     language_to_tweet="English"
-    rss_category=["Tech"]
+    rss_category=["Tech",'AI','EVs']
 
 
     schedule_job(news_req_interval,rss_category,publish_time_limt,min_tweet_interval,max_tweet_interval,language_to_tweet,us_timezone)
