@@ -42,7 +42,7 @@ def reset_job_counter(timezone='America/New_York'):
             # current_time = datetime.datetime.now(time_zone)
             # wait_time=(next_zero_time-current_time).seconds
             scheduler.run_pending()
-            time.sleep(1)
+            time.sleep(0.5)
     except Exception as e:
         logger.error(f"Error occured in {threading.current_thread()}: {e}")
 
