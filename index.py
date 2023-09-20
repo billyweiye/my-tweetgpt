@@ -14,22 +14,27 @@ import random
 
 # 创建线程本地存储对象
 local_data = threading.local()
+
+lock = threading.Lock()
+job_execution_count_global=0
 # 设置线程本地存储中的全局变量字典
-def set_job_execution_count(job_execution_count=0):
-    local_data.job_execution_count = job_execution_count
+def set_job_execution_count(count=0):
+    global job_execution_count_global
+    with lock:  # 使用线程锁确保线程安全
+        job_execution_count_global =count
+
     
 
 # 获取线程本地存储中的全局变量字典
 def get_job_execution_count():
-    if not hasattr(local_data, 'job_execution_count'):
-        local_data.job_execution_count = 0
-    return local_data.job_execution_count
+    global job_execution_count_global
+    return job_execution_count_global
 
 def reset_job_counter(timezone='America/New_York'):
     try:
         time_zone=pytz.timezone(timezone)
         def reset_job():
-            set_job_execution_count(job_execution_count=0)
+            set_job_execution_count(0)
             logger.info(f"Job execution count reset at {datetime.datetime.now()} || Current Job Count is {get_job_execution_count()}")
 
         #创建定时任务来重置发推次数上限
