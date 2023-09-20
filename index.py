@@ -190,7 +190,7 @@ if __name__ == "__main__":
     logger.setLevel(logging.INFO)
 
     # 创建 TimedRotatingFileHandler，每 2 小时滚动一次日志文件
-    log_handler = TimedRotatingFileHandler('app.log', when='H', interval=2, backupCount=3)
+    log_handler = TimedRotatingFileHandler('app.log', when='H', interval=2, backupCount=4)
     log_handler.setLevel(logging.DEBUG)
 
 
