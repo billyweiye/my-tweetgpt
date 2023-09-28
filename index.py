@@ -114,10 +114,10 @@ def tweet_job(language,timezone):
             # 将当前时间设置为目标时区的时间
             target_time = current_time.astimezone(time_zone)
             # 限制任务时间 
-            if target_time.hour < 7 and target_time.hour > 2:
-                logger.warning("Not Scheduled time. Wait another 10 mins.")
-                time.sleep(10*60)   #等待10分钟
-                continue
+         #   if target_time.hour < 7 and target_time.hour > 2:
+         #       logger.warning("Not Scheduled time. Wait another 10 mins.")
+         #       time.sleep(10*60)   #等待10分钟
+         #       continue
 
             if job_execution_count < max_job_executions:
                 logger.info(f"TASK: {job_execution_count}")
