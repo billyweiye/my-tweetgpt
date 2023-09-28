@@ -163,7 +163,7 @@ def tweet_job(language,timezone):
                 min_interval=post_interval(target_time)[0]
                 max_interval=post_interval(target_time)[1]
                 sleep_seconds=random.randint(min_interval*60,max_interval*60)
-                next_post_time=datetime.datetime.now()+datetime.timedelta(sleep_seconds)
+                next_post_time=datetime.datetime.now()+datetime.timedelta(seconds=sleep_seconds)
                 logger.info(f"Next Post Time: {next_post_time.strftime('%Y-%m-%d %H:%M:%S')}")
                 time.sleep(sleep_seconds)
             else:
