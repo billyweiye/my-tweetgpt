@@ -91,8 +91,20 @@ def get_feed_queue():
     return my_queue.get()
 
 
+def post_interval(current_time):
+    if target_time.hour >= 9 and target_time.hour < 14:
+        min_tweet_interval=8
+        max_tweet_interval=10
+    elif target_time.hour >= 19 and target_time.hour < 22:
+        min_tweet_interval=15
+        max_tweet_interval=20
+    else:
+        min_tweet_interval=190
+        max_tweet_interval=200
+    return (min_tweet_interval,max_tweet_interval)
 
-def tweet_job(min_tweet_interval,max_tweet_interval,language,timezone):
+
+def tweet_job(language,timezone):
     time_zone=pytz.timezone(timezone)
     while True:
         try:
@@ -149,7 +161,7 @@ def tweet_job(min_tweet_interval,max_tweet_interval,language,timezone):
                 set_job_execution_count(job_execution_count + 1)
 
                 
-                time.sleep(random.randint(min_tweet_interval*60,max_tweet_interval*60))
+                time.sleep(random.randint(post_interval(target_time)[0]*60,post_interval(target_time)[1]*60))
             else:
                 logger.warning(f"JOB COUNTS: {job_execution_count} EXCEEDED THE MAX JOB COUNT!!")
                 time.sleep(30*60)
@@ -159,12 +171,12 @@ def tweet_job(min_tweet_interval,max_tweet_interval,language,timezone):
 
 
 
-def schedule_job(news_req_interval:int=1,category:list=[],publish_time:int=60,min_tweet_interval:int=1,max_tweet_interval:int=10,language_to_tweet:str="English",timezone='America/New_York'):
+def schedule_job(news_req_interval:int=1,category:list=[],publish_time:int=60,language_to_tweet:str="English",timezone='America/New_York'):
     #创建获取feeds线程
     thread_rss=threading.Thread(target=news_queue,args=(news_req_interval,category,publish_time,),name="RSS")
 
     # 创建线程来并行执行任务
-    thread_tweet = threading.Thread(target=tweet_job,args=(min_tweet_interval,max_tweet_interval,language_to_tweet,timezone,), name="TWEET")
+    thread_tweet = threading.Thread(target=tweet_job,args=(language_to_tweet,timezone,), name="TWEET")
     
     #创建重置任务计数线程
     thread_counter = threading.Thread(target=reset_job_counter,args=(timezone,), name="JOB_COUNTER")
@@ -223,13 +235,11 @@ if __name__ == "__main__":
 
     news_req_interval=1  #每1分钟检查一次rss
     publish_time_limt=60
-    min_tweet_interval=5 
-    max_tweet_interval=30
     language_to_tweet="English"
     rss_category=["Tech",'AI','EVs','Courses']
 
 
-    schedule_job(news_req_interval,rss_category,publish_time_limt,min_tweet_interval,max_tweet_interval,language_to_tweet,us_timezone)
+    schedule_job(news_req_interval,rss_category,publish_time_limt,language_to_tweet,us_timezone)
 
     
 
