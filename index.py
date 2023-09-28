@@ -232,7 +232,7 @@ if __name__ == "__main__":
     }
 
     # Counter to keep track of job executions
-    max_job_executions = 45
+    max_job_executions = 50
 
     # 指定目标时区
     us_timezone = 'America/New_York'
