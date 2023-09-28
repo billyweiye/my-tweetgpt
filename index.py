@@ -98,6 +98,9 @@ def post_interval(current_time):
     elif current_time.hour >= 19 and current_time.hour < 22:
         min_tweet_interval=15
         max_tweet_interval=20
+    elif (current_time-datetime.datetime(current_time.year,current_time.month,current_time.day,9,0,0,tzinfo=current_time.tzinfo)).seconds<=190*60 or (current_time-datetime.datetime(current_time.year,current_time.month,current_time.day,19,0,0,tzinfo=current_time.tzinfo)).seconds<=190*60:
+        min_tweet_interval=min([(current_time-datetime.datetime(current_time.year,current_time.month,current_time.day,9,0,0,tzinfo=current_time.tzinfo)).seconds/60,(current_time-datetime.datetime(current_time.year,current_time.month,current_time.day,19,0,0,tzinfo=current_time.tzinfo)).seconds/60])
+        max_tweet_interval=min([(current_time-datetime.datetime(current_time.year,current_time.month,current_time.day,9,0,0,tzinfo=current_time.tzinfo)).seconds/60,(current_time-datetime.datetime(current_time.year,current_time.month,current_time.day,19,0,0,tzinfo=current_time.tzinfo)).seconds/60])
     else:
         min_tweet_interval=190
         max_tweet_interval=200
