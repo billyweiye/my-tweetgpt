@@ -160,8 +160,12 @@ def tweet_job(language,timezone):
 
                 set_job_execution_count(job_execution_count + 1)
 
-                
-                time.sleep(random.randint(post_interval(target_time)[0]*60,post_interval(target_time)[1]*60))
+                min_interval=post_interval(target_time)[0]
+                max_interval=post_interval(target_time)[1]
+                sleep_seconds=random.randint(min_interval*60,max_interval*60)
+                next_post_time=datetime.datetime.now()+datetime.timedelta(sleep_seconds)
+                logger.info(f"Next Post Time: {next_post_time.strftime('%Y-%m-%d %H:%M:%S')}")
+                time.sleep(sleep_seconds)
             else:
                 logger.warning(f"JOB COUNTS: {job_execution_count} EXCEEDED THE MAX JOB COUNT!!")
                 time.sleep(30*60)
