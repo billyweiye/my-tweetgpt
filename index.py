@@ -92,10 +92,10 @@ def get_feed_queue():
 
 
 def post_interval(current_time):
-    if target_time.hour >= 9 and target_time.hour < 14:
+    if current_time.hour >= 9 and current_time.hour < 14:
         min_tweet_interval=8
         max_tweet_interval=10
-    elif target_time.hour >= 19 and target_time.hour < 22:
+    elif current_time.hour >= 19 and current_time.hour < 22:
         min_tweet_interval=15
         max_tweet_interval=20
     else:
