@@ -65,7 +65,7 @@ def save_posted_news(news_id):
 
 
 
-my_queue = queue.Queue()  # 使用优先级队列
+my_queue = queue.LifoQueue()  # 使用LIFO队列 
 def put_unique_message(queue_obj, message):
     # 检查队列中是否已经存在相同的消息
     if message not in queue_obj.queue:
