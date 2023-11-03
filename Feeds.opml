@@ -67,11 +67,6 @@
 
 
 " version="RSS" type="rss" title="MIT News - Computer Science and Artificial Intelligence Laboratory (CSAIL)" text="MIT News - Computer Science and Artificial Intelligence Laboratory (CSAIL)"/>
-			<outline htmlUrl="https://www.theverge.com/ai-artificial-intelligence" xmlUrl="https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
-
-
-" version="RSS" type="rss" title="The Verge -  Artificial Intelligences" text="The Verge -  Artificial Intelligences"/>
-			<outline htmlUrl="https://www.theverge.com/tech" xmlUrl="http://www.theverge.com/tech/rss/index.xml" version="RSS" type="rss" title="The Verge -  Tech Posts" text="The Verge -  Tech Posts"/>
 			<outline htmlUrl="https://www.youtube.com/channel/UCrM7B7SL_g1edFOnmj-SDKg" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCrM7B7SL_g1edFOnmj-SDKg" version="RSS" type="rss" title="Bloomberg Technology" text="Bloomberg Technology"/>
 			<outline htmlUrl="https://www.scmp.com/rss/36/feed" xmlUrl="http://www.scmp.com/rss/36/feed" version="RSS" type="rss" title="Tech - South China Morning Post" text="Tech - South China Morning Post"/>
 			<outline htmlUrl="https://www.youtube.com/channel/UCddiUEpeqJcYeBxX1IVBKvQ" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCddiUEpeqJcYeBxX1IVBKvQ" version="RSS" type="rss" title="The Verge" text="The Verge"/>
