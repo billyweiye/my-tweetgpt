@@ -19,7 +19,7 @@
 		<outline title="Coding" text="Coding">
 			<outline htmlUrl="https://hacks.mozilla.org/" xmlUrl="https://hacks.mozilla.org/feed/" version="RSS" type="rss" title="Mozilla Hacks – the Web developer blog" text="Mozilla Hacks – the Web developer blog"/>
 			<outline htmlUrl="https://fly.io/blog/" xmlUrl="https://fly.io/blog/feed.xml" version="RSS" type="rss" title="The Fly Blog" text="The Fly Blog"/>
-			<outline htmlUrl="http://blog.cloudflare.com/" xmlUrl="https://blog.cloudflare.com/rss/" version="RSS" type="rss" title="The Cloudflare Blog" text="The Cloudflare Blog"/>
+			<outline htmlUrl="http://blog.cloudflare.com" xmlUrl="https://blog.cloudflare.com/rss/" version="RSS" type="rss" title="The Cloudflare Blog" text="The Cloudflare Blog"/>
 		</outline>
 		<outline title="DataSci" text="DataSci">
 			<outline htmlUrl="https://blog.tensorflow.org/" xmlUrl="https://blog.tensorflow.org/feeds/posts/default" version="RSS" type="rss" title="The TensorFlow Blog" text="The TensorFlow Blog"/>
@@ -47,8 +47,6 @@
 			<outline htmlUrl="https://medium.com/@netflixtechblog?source=rss-c3aeaf49d8a4------2" xmlUrl="https://netflixtechblog.medium.com/feed" version="RSS" type="rss" title="Stories by Netflix Technology Blog on Medium" text="Stories by Netflix Technology Blog on Medium"/>
 			<outline htmlUrl="https://www.canva.dev/blog/engineering/" xmlUrl="https://canvatechblog.com/feed" version="RSS" type="rss" title="Canva - Engineering Blog" text="Canva - Engineering Blog"/>
 			<outline htmlUrl="https://medium.com/the-coinbase-blog?source=rss----c114225aeaf7---4" xmlUrl="https://medium.com/feed/the-coinbase-blog" version="RSS" type="rss" title="The Coinbase Blog - Medium" text="The Coinbase Blog - Medium"/>
-			<outline htmlUrl="https://juejin.cn/user/1838039172387262/posts" xmlUrl="https://rsshub.app/juejin/posts/1838039172387262" version="RSS" type="rss" title="掘金专栏-字节跳动技术团队" text="掘金专栏-字节跳动技术团队"/>
-			<outline htmlUrl="https://tech.meituan.com/feed/" xmlUrl="https://tech.meituan.com/feed/" version="RSS" type="rss" title="美团技术团队" text="美团技术团队"/>
 		</outline>
 		<outline title="News" text="News">
 			<outline htmlUrl="https://www.inside.com.tw/feed/rss" xmlUrl="https://www.inside.com.tw/feed/rss" version="RSS" type="rss" title="INSIDE" text="INSIDE"/>
@@ -73,16 +71,14 @@
 
 
 " version="RSS" type="rss" title="The Verge -  Artificial Intelligences" text="The Verge -  Artificial Intelligences"/>
-			<outline htmlUrl="https://www.engadget.com/" xmlUrl="http://www.engadget.com/rss-full.xml
-
-
-" version="RSS" type="rss" title="Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics" text="Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics"/>
 			<outline htmlUrl="https://www.theverge.com/tech" xmlUrl="http://www.theverge.com/tech/rss/index.xml" version="RSS" type="rss" title="The Verge -  Tech Posts" text="The Verge -  Tech Posts"/>
 			<outline htmlUrl="https://www.youtube.com/channel/UCrM7B7SL_g1edFOnmj-SDKg" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCrM7B7SL_g1edFOnmj-SDKg" version="RSS" type="rss" title="Bloomberg Technology" text="Bloomberg Technology"/>
 			<outline htmlUrl="https://www.scmp.com/rss/36/feed" xmlUrl="http://www.scmp.com/rss/36/feed" version="RSS" type="rss" title="Tech - South China Morning Post" text="Tech - South China Morning Post"/>
 			<outline htmlUrl="https://www.youtube.com/channel/UCddiUEpeqJcYeBxX1IVBKvQ" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCddiUEpeqJcYeBxX1IVBKvQ" version="RSS" type="rss" title="The Verge" text="The Verge"/>
 			<outline htmlUrl="https://www.youtube.com/channel/UCBJycsmduvYEL83R_U4JriQ" xmlUrl="https://www.youtube.com/feeds/videos.xml?user=MarquesBrownlee" version="RSS" type="rss" title="Marques Brownlee" text="Marques Brownlee"/>
 			<outline htmlUrl="https://www.youtube.com/channel/UC-6OW5aJYBFM33zXQlBKPNA" xmlUrl="https://www.youtube.com/feeds/videos.xml?user=Engadget" version="RSS" type="rss" title="Engadget" text="Engadget"/>
+			<outline htmlUrl="https://www.amazon.science/" xmlUrl="https://www.amazon.science/index.rss" version="RSS" type="rss" title="Amazon Science homepage" text="Amazon Science homepage"/>
+			<outline htmlUrl="https://news.crunchbase.com/" xmlUrl="https://news.crunchbase.com/feed/" version="RSS" type="rss" title="Crunchbase News" text="Crunchbase News"/>
 		</outline>
 		<outline title="科技" text="科技">
 			<outline htmlUrl="https://www.qbitai.com" xmlUrl="https://www.qbitai.com/feed" version="RSS" type="rss" title="量子位" text="量子位"/>
@@ -113,7 +109,7 @@
 		</outline>
 		<outline title="AI" text="AI">
 			<outline htmlUrl="https://engineering.fb.com/" xmlUrl="https://engineering.fb.com/feed/" version="RSS" type="rss" title="Engineering at Meta" text="Engineering at Meta"/>
-			<outline htmlUrl="https://openai.com/blog/rss/" xmlUrl="https://openai.com/blog/rss/" version="RSS" type="rss" title="OpenAI Blog" text="OpenAI Blog"/>
+			<outline htmlUrl="https://openai.com/blog" xmlUrl="https://openai.com/blog/rss/" version="RSS" type="rss" title="OpenAI Blog" text="OpenAI Blog"/>
 			<outline htmlUrl="http://blog.research.google/" xmlUrl="http://googleresearch.blogspot.com/atom.xml
 
 
@@ -124,6 +120,18 @@
 
 
 " version="RSS" type="rss" title="Microsoft Research Blog - Microsoft Research" text="Microsoft Research Blog - Microsoft Research"/>
+			<outline htmlUrl="http://arxiv.org/" xmlUrl="https://export.arxiv.org/rss/cs.LG" version="RSS" type="rss" title="cs.LG updates on arXiv.org" text="cs.LG updates on arXiv.org"/>
+			<outline htmlUrl="http://arxiv.org/" xmlUrl="https://export.arxiv.org/rss/stat.ML" version="RSS" type="rss" title="stat.ML updates on arXiv.org" text="stat.ML updates on arXiv.org"/>
+			<outline htmlUrl="https://aws.amazon.com/blogs/machine-learning/" xmlUrl="https://aws.amazon.com/blogs/machine-learning/feed/" version="RSS" type="rss" title="AWS Machine Learning Blog" text="AWS Machine Learning Blog"/>
+			<outline htmlUrl="http://jalammar.github.io/" xmlUrl="https://jalammar.github.io/feed.xml" version="RSS" type="rss" title="Jay Alammar" text="Jay Alammar"/>
+			<outline htmlUrl="http://www.jmlr.org" xmlUrl="https://www.jmlr.org/jmlr.xml" version="RSS" type="rss" title="JMLR" text="JMLR"/>
+			<outline htmlUrl="https://mlinproduction.com" xmlUrl="https://mlinproduction.com/feed/" version="RSS" type="rss" title="ML in Production" text="ML in Production"/>
+			<outline htmlUrl="https://www.youtube.com/channel/UCHuiy8bXnmK5nisYHUd1J5g" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCHuiy8bXnmK5nisYHUd1J5g" version="RSS" type="rss" title="NVIDIA" text="NVIDIA"/>
+			<outline htmlUrl="https://www.youtube.com/channel/UCa0RTSXWyZdh7IciV9r-3ow" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCa0RTSXWyZdh7IciV9r-3ow" version="RSS" type="rss" title="The Data Scientist Show - Daliana Liu" text="The Data Scientist Show - Daliana Liu"/>
+			<outline htmlUrl="https://blog.ml.cmu.edu" xmlUrl="https://blog.ml.cmu.edu/feed/" version="RSS" type="rss" title="Machine Learning Blog | ML@CMU | Carnegie Mellon University" text="Machine Learning Blog | ML@CMU | Carnegie Mellon University"/>
+			<outline htmlUrl="https://huggingface.co/blog" xmlUrl="https://huggingface.co/blog/feed.xml" version="RSS" type="rss" title="Hugging Face - Blog" text="Hugging Face - Blog"/>
+			<outline htmlUrl="https://minimaxir.com/post/" xmlUrl="https://minimaxir.com/post/index.xml" version="RSS" type="rss" title="Posts on Max Woolf's Blog" text="Posts on Max Woolf's Blog"/>
+			<outline htmlUrl="https://www.theguardian.com/technology/artificialintelligenceai" xmlUrl="https://www.theguardian.com/technology/artificialintelligenceai/rss" version="RSS" type="rss" title="Artificial intelligence (AI) | The Guardian" text="Artificial intelligence (AI) | The Guardian"/>
 		</outline>
 		<outline title="Courses" text="Courses">
 			<outline htmlUrl="https://www.youtube.com/channel/UCBa5G_ESCn8Yd4vw5U-gIcg" xmlUrl="https://www.youtube.com/feeds/videos.xml?user=StanfordOnline" version="RSS" type="rss" title="Stanford Online" text="Stanford Online"/>
@@ -136,6 +144,12 @@
 			<outline htmlUrl="https://www.youtube.com/channel/UCPrm9d2hLd_YxSExH7oRyAg" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCPrm9d2hLd_YxSExH7oRyAg" version="RSS" type="rss" title="Dune" text="Dune"/>
 			<outline htmlUrl="https://www.youtube.com/channel/UCp3a0vIbwtVGtMVIfIsKvCQ" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCp3a0vIbwtVGtMVIfIsKvCQ" version="RSS" type="rss" title="ML Collective" text="ML Collective"/>
 			<outline htmlUrl="https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw" version="RSS" type="rss" title="3Blue1Brown" text="3Blue1Brown"/>
+		</outline>
+		<outline title="博客" text="博客">
+			<outline htmlUrl="https://juejin.cn/user/1838039172387262/posts" xmlUrl="https://rsshub.app/juejin/posts/1838039172387262" version="RSS" type="rss" title="掘金专栏-字节跳动技术团队" text="掘金专栏-字节跳动技术团队"/>
+			<outline htmlUrl="https://tech.meituan.com/feed/" xmlUrl="https://tech.meituan.com/feed/" version="RSS" type="rss" title="美团技术团队" text="美团技术团队"/>
+			<outline htmlUrl="https://blog.csdn.net/weixin_51484067" xmlUrl="https://blog.csdn.net/weixin_51484067/rss/list?spm=1001.2014.3001.5494" version="RSS" type="rss" title="weixin_51484067的博客" text="weixin_51484067的博客"/>
+			<outline htmlUrl="https://medium.com/@mingchikuo?source=rss-d19afb905185------2" xmlUrl="https://medium.com/feed/@mingchikuo" version="RSS" type="rss" title="Stories by 郭明錤 (Ming-Chi Kuo) on Medium" text="Stories by 郭明錤 (Ming-Chi Kuo) on Medium"/>
 		</outline>
 	</body>
 </opml>
