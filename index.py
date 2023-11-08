@@ -238,7 +238,7 @@ if __name__ == "__main__":
     max_job_executions = 50
 
     # 指定目标时区
-    us_timezone = 'America/New_York'
+    us_timezone = 'America/Los_Angeles'
 
     news_req_interval=1  #每1分钟检查一次rss
     publish_time_limt=60
