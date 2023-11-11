@@ -74,6 +74,8 @@
 			<outline htmlUrl="https://www.youtube.com/channel/UC-6OW5aJYBFM33zXQlBKPNA" xmlUrl="https://www.youtube.com/feeds/videos.xml?user=Engadget" version="RSS" type="rss" title="Engadget" text="Engadget"/>
 			<outline htmlUrl="https://www.amazon.science/" xmlUrl="https://www.amazon.science/index.rss" version="RSS" type="rss" title="Amazon Science homepage" text="Amazon Science homepage"/>
 			<outline htmlUrl="https://news.crunchbase.com/" xmlUrl="https://news.crunchbase.com/feed/" version="RSS" type="rss" title="Crunchbase News" text="Crunchbase News"/>
+			<outline htmlUrl="https://www.theverge.com/tiktok" xmlUrl="https://www.theverge.com/rss/tiktok/index.xml" version="RSS" type="rss" title="The Verge -  TikToks" text="The Verge -  TikToks"/>
+			<outline htmlUrl="https://www.theverge.com/policy" xmlUrl="https://www.theverge.com/policy/rss/index.xml" version="RSS" type="rss" title="The Verge -  Policy Posts" text="The Verge -  Policy Posts"/>
 		</outline>
 		<outline title="科技" text="科技">
 			<outline htmlUrl="https://www.qbitai.com" xmlUrl="https://www.qbitai.com/feed" version="RSS" type="rss" title="量子位" text="量子位"/>
