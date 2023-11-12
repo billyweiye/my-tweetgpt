@@ -60,7 +60,8 @@ def get_feeds(rss_source:list=[],publish_limit:int = 60):
                         "title":entry.get("title"),
                         "link":entry.get("link"),
                         "date":entry.get("published_parsed"),
-                        "description":summary_text
+                        "description":summary_text,
+                        "content":entry.get("content"),
                     })
 
                  #   print(f"{rss.get('text')} \n {entry.get('title')}")

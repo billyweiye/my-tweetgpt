@@ -136,10 +136,14 @@ def tweet_job(sys_prompt,timezone):
                 news_title=news.get("title")
                 new_description=news.get("description")
                 news_url=news.get("link")
+                news_content=news.get("content")
 
                 #调用GPT 生成content
                 if 'youtube' not in news_url:
-                    prompts=f"title:{news_title} || description:{new_description}"
+                    prompts=f"""title:{news_title} \
+                          description:{new_description} \ 
+                          content: {news_content} \ 
+                          """
                     logger.info(f"Prompts:{prompts}")
                     tweets=generate_tweet(openai_api_key,prompts,sys_prompt)
                     

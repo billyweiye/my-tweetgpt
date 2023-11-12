@@ -4,165 +4,170 @@
 <title>Feeds</title>
 </head>
 <body>
-<outline text="AI" title="AI">
-<outline type="rss" htmlUrl="https://openai.com/blog" text="OpenAI Blog" title="OpenAI Blog" xmlUrl="https://openai.com/blog/rss/" />
-<outline type="rss" xmlUrl="https://bair.berkeley.edu/blog/feed.xml" htmlUrl="http://bair.berkeley.edu/blog/" title="The Berkeley Artificial Intelligence Research Blog" text="The Berkeley Artificial Intelligence Research Blog" />
-<outline htmlUrl="https://blogs.nvidia.com/" xmlUrl="http://feeds.feedburner.com/nvidiablog" title="NVIDIA Blog" text="NVIDIA Blog" type="rss" />
-<outline xmlUrl="https://engineering.fb.com/feed/" title="Engineering at Meta" text="Engineering at Meta" type="rss" htmlUrl="https://engineering.fb.com/" />
-<outline type="rss" title="Microsoft Research Blog - Microsoft Research" text="Microsoft Research Blog - Microsoft Research" xmlUrl="http://research.microsoft.com/rss/news.xml" htmlUrl="https://www.microsoft.com/en-us/research/blog/" />
-<outline xmlUrl="https://export.arxiv.org/rss/stat.ML" type="rss" title="stat.ML updates on arXiv.org" text="stat.ML updates on arXiv.org" htmlUrl="http://arxiv.org/" />
-<outline xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCa0RTSXWyZdh7IciV9r-3ow" title="The Data Scientist Show - Daliana Liu" text="The Data Scientist Show - Daliana Liu" type="rss" htmlUrl="https://www.youtube.com/channel/UCa0RTSXWyZdh7IciV9r-3ow" />
-<outline text="AWS Machine Learning Blog" title="AWS Machine Learning Blog" htmlUrl="https://aws.amazon.com/blogs/machine-learning/" type="rss" xmlUrl="https://aws.amazon.com/blogs/machine-learning/feed/" />
-<outline text="Jay Alammar" type="rss" title="Jay Alammar" htmlUrl="http://jalammar.github.io/" xmlUrl="https://jalammar.github.io/feed.xml" />
-<outline xmlUrl="https://blog.ml.cmu.edu/feed/" type="rss" htmlUrl="https://blog.ml.cmu.edu" text="Machine Learning Blog | ML@CMU | Carnegie Mellon University" title="Machine Learning Blog | ML@CMU | Carnegie Mellon University" />
-<outline title="JMLR" text="JMLR" htmlUrl="http://www.jmlr.org" xmlUrl="https://www.jmlr.org/jmlr.xml" type="rss" />
-<outline htmlUrl="https://mlinproduction.com" type="rss" title="ML in Production" xmlUrl="https://mlinproduction.com/feed/" text="ML in Production" />
-<outline title="The Guardian" htmlUrl="https://www.theguardian.com" text="The Guardian" xmlUrl="https://www.theguardian.com/technology/artificialintelligenceai/rss" type="rss" />
-<outline text="Posts on Max Woolf's Blog" title="Posts on Max Woolf's Blog" htmlUrl="https://minimaxir.com/post/" type="rss" xmlUrl="https://minimaxir.com/post/index.xml" />
-<outline htmlUrl="https://www.youtube.com/channel/UCHuiy8bXnmK5nisYHUd1J5g" type="rss" title="NVIDIA" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCHuiy8bXnmK5nisYHUd1J5g" text="NVIDIA" />
-<outline text="cs.LG updates on arXiv.org" title="cs.LG updates on arXiv.org" htmlUrl="http://arxiv.org/" type="rss" xmlUrl="https://export.arxiv.org/rss/cs.LG" />
-<outline htmlUrl="https://huggingface.co/blog" xmlUrl="https://huggingface.co/blog/feed.xml" text="Hugging Face - Blog" type="rss" title="Hugging Face - Blog" />
-<outline xmlUrl="https://www.theverge.com/rss/ai-artificial-intelligence/index.xml" type="rss" title="The Verge - Artificial Intelligences" htmlUrl="https://www.theverge.com/ai-artificial-intelligence" text="The Verge - Artificial Intelligences" />
-<outline title="Google AI Blog" text="Google AI Blog" type="rss" xmlUrl="http://googleresearch.blogspot.com/atom.xml" htmlUrl="http://blog.research.google/" />
+<outline title="AI" text="AI">
+<outline title="OpenAI Blog" xmlUrl="https://openai.com/blog/rss/" htmlUrl="https://openai.com/blog" text="OpenAI Blog" type="rss" />
+<outline type="rss" title="The Berkeley Artificial Intelligence Research Blog" htmlUrl="http://bair.berkeley.edu/blog/" xmlUrl="https://bair.berkeley.edu/blog/feed.xml" text="The Berkeley Artificial Intelligence Research Blog" />
+<outline text="NVIDIA Blog" xmlUrl="http://feeds.feedburner.com/nvidiablog" type="rss" title="NVIDIA Blog" htmlUrl="https://blogs.nvidia.com/" />
+<outline htmlUrl="https://engineering.fb.com/" title="Engineering at Meta" type="rss" xmlUrl="https://engineering.fb.com/feed/" text="Engineering at Meta" />
+<outline xmlUrl="http://research.microsoft.com/rss/news.xml" type="rss" htmlUrl="https://www.microsoft.com/en-us/research/blog/" title="Microsoft Research Blog - Microsoft Research" text="Microsoft Research Blog - Microsoft Research" />
+<outline title="stat.ML updates on arXiv.org" text="stat.ML updates on arXiv.org" type="rss" htmlUrl="http://arxiv.org/" xmlUrl="https://export.arxiv.org/rss/stat.ML" />
+<outline title="The Data Scientist Show - Daliana Liu" type="rss" htmlUrl="https://www.youtube.com/channel/UCa0RTSXWyZdh7IciV9r-3ow" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCa0RTSXWyZdh7IciV9r-3ow" text="The Data Scientist Show - Daliana Liu" />
+<outline text="AWS Machine Learning Blog" htmlUrl="https://aws.amazon.com/blogs/machine-learning/" xmlUrl="https://aws.amazon.com/blogs/machine-learning/feed/" type="rss" title="AWS Machine Learning Blog" />
+<outline xmlUrl="https://jalammar.github.io/feed.xml" type="rss" title="Jay Alammar" htmlUrl="http://jalammar.github.io/" text="Jay Alammar" />
+<outline text="Machine Learning Blog | ML@CMU | Carnegie Mellon University" title="Machine Learning Blog | ML@CMU | Carnegie Mellon University" type="rss" xmlUrl="https://blog.ml.cmu.edu/feed/" htmlUrl="https://blog.ml.cmu.edu" />
+<outline type="rss" title="JMLR" htmlUrl="http://www.jmlr.org" xmlUrl="https://www.jmlr.org/jmlr.xml" text="JMLR" />
+<outline title="ML in Production" xmlUrl="https://mlinproduction.com/feed/" htmlUrl="https://mlinproduction.com" type="rss" text="ML in Production" />
+<outline title="The Guardian" htmlUrl="https://www.theguardian.com" xmlUrl="https://www.theguardian.com/technology/artificialintelligenceai/rss" text="The Guardian" type="rss" />
+<outline title="Posts on Max Woolf's Blog" htmlUrl="https://minimaxir.com/post/" xmlUrl="https://minimaxir.com/post/index.xml" text="Posts on Max Woolf's Blog" type="rss" />
+<outline title="NVIDIA" type="rss" text="NVIDIA" htmlUrl="https://www.youtube.com/channel/UCHuiy8bXnmK5nisYHUd1J5g" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCHuiy8bXnmK5nisYHUd1J5g" />
+<outline htmlUrl="http://arxiv.org/" type="rss" xmlUrl="https://export.arxiv.org/rss/cs.LG" text="cs.LG updates on arXiv.org" title="cs.LG updates on arXiv.org" />
+<outline title="Hugging Face - Blog" type="rss" xmlUrl="https://huggingface.co/blog/feed.xml" text="Hugging Face - Blog" htmlUrl="https://huggingface.co/blog" />
+<outline title="The Verge - Artificial Intelligences" htmlUrl="https://www.theverge.com/ai-artificial-intelligence" xmlUrl="https://www.theverge.com/rss/ai-artificial-intelligence/index.xml" text="The Verge - Artificial Intelligences" type="rss" />
+<outline xmlUrl="http://googleresearch.blogspot.com/atom.xml" title="Google AI Blog" text="Google AI Blog" type="rss" htmlUrl="http://blog.research.google/" />
 </outline>
 <outline text="Apple" title="Apple">
-<outline title="Apple Newsroom" type="rss" htmlUrl="https://www.apple.com/newsroom/rss-feed.rss" xmlUrl="https://www.apple.com/newsroom/rss-feed.rss" text="Apple Newsroom" />
-<outline text="9to5Mac" xmlUrl="https://9to5mac.com/feed/" htmlUrl="https://9to5mac.com/" type="rss" title="9to5Mac" />
+<outline title="Apple Newsroom" htmlUrl="https://www.apple.com/newsroom/rss-feed.rss" type="rss" text="Apple Newsroom" xmlUrl="https://www.apple.com/newsroom/rss-feed.rss" />
+<outline title="9to5Mac" text="9to5Mac" type="rss" htmlUrl="https://9to5mac.com/" xmlUrl="https://9to5mac.com/feed/" />
 </outline>
-<outline text="Career" title="Career">
-<outline htmlUrl="https://insuranceblog.accenture.com/" type="rss" text="Insurance Blog | Accenture" xmlUrl="http://insuranceblog.accenture.com/feed/" title="Insurance Blog | Accenture" />
-<outline type="rss" title="The Verge - Energies" text="The Verge - Energies" htmlUrl="https://www.theverge.com/energy" xmlUrl="https://www.theverge.com/rss/energy/index.xml" />
-<outline htmlUrl="https://www.mckinsey.com/" type="rss" title="McKinsey Insights &amp; Publications" xmlUrl="https://www.mckinsey.com/insights/rss" text="McKinsey Insights &amp; Publications" />
+<outline title="Career" text="Career">
+<outline xmlUrl="http://insuranceblog.accenture.com/feed/" htmlUrl="https://insuranceblog.accenture.com/" text="Insurance Blog | Accenture" title="Insurance Blog | Accenture" type="rss" />
+<outline htmlUrl="https://www.theverge.com/energy" text="The Verge - Energies" title="The Verge - Energies" type="rss" xmlUrl="https://www.theverge.com/rss/energy/index.xml" />
+<outline xmlUrl="https://www.mckinsey.com/insights/rss" text="McKinsey Insights &amp; Publications" title="McKinsey Insights &amp; Publications" type="rss" htmlUrl="https://www.mckinsey.com/" />
 </outline>
 <outline title="Coding" text="Coding">
-<outline xmlUrl="https://hacks.mozilla.org/feed/" text="Mozilla Hacks – the Web developer blog" type="rss" title="Mozilla Hacks – the Web developer blog" htmlUrl="https://hacks.mozilla.org/" />
-<outline text="The Fly Blog" xmlUrl="https://fly.io/blog/feed.xml" htmlUrl="https://fly.io/blog/" type="rss" title="The Fly Blog" />
-<outline title="The Cloudflare Blog" text="The Cloudflare Blog" htmlUrl="http://blog.cloudflare.com" type="rss" xmlUrl="https://blog.cloudflare.com/rss/" />
+<outline htmlUrl="https://hacks.mozilla.org/" text="Mozilla Hacks – the Web developer blog" title="Mozilla Hacks – the Web developer blog" xmlUrl="https://hacks.mozilla.org/feed/" type="rss" />
+<outline title="The Fly Blog" text="The Fly Blog" htmlUrl="https://fly.io/blog/" type="rss" xmlUrl="https://fly.io/blog/feed.xml" />
+<outline text="The Cloudflare Blog" title="The Cloudflare Blog" xmlUrl="https://blog.cloudflare.com/rss/" htmlUrl="http://blog.cloudflare.com" type="rss" />
 </outline>
 <outline text="Courses" title="Courses">
-<outline xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw" type="rss" title="3Blue1Brown" text="3Blue1Brown" htmlUrl="https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw" />
-<outline type="rss" text="PyData" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCOjD18EJYcsBog4IozkF_7w" title="PyData" htmlUrl="https://www.youtube.com/channel/UCOjD18EJYcsBog4IozkF_7w" />
-<outline xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCPrm9d2hLd_YxSExH7oRyAg" htmlUrl="https://www.youtube.com/channel/UCPrm9d2hLd_YxSExH7oRyAg" title="Dune" type="rss" text="Dune" />
-<outline htmlUrl="https://www.youtube.com/channel/UCcIXc5mJsHVYTZR1maL5l9w" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCcIXc5mJsHVYTZR1maL5l9w" title="DeepLearningAI" type="rss" text="DeepLearningAI" />
-<outline text="CS50" htmlUrl="https://www.youtube.com/channel/UCcabW7890RKJzL968QWEykA" title="CS50" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCcabW7890RKJzL968QWEykA" type="rss" />
-<outline htmlUrl="https://www.youtube.com/channel/UCBa5G_ESCn8Yd4vw5U-gIcg" text="Stanford Online" title="Stanford Online" xmlUrl="https://www.youtube.com/feeds/videos.xml?user=StanfordOnline" type="rss" />
-<outline type="rss" text="ML Collective" htmlUrl="https://www.youtube.com/channel/UCp3a0vIbwtVGtMVIfIsKvCQ" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCp3a0vIbwtVGtMVIfIsKvCQ" title="ML Collective" />
-<outline title="The Full Stack" htmlUrl="https://www.youtube.com/channel/UCVchfoB65aVtQiDITbGq2LQ" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCVchfoB65aVtQiDITbGq2LQ" type="rss" text="The Full Stack" />
-<outline text="WeAreDevelopers" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCSD0dLRGQk_T-D3RvpM5aFQ" type="rss" htmlUrl="https://www.youtube.com/channel/UCSD0dLRGQk_T-D3RvpM5aFQ" title="WeAreDevelopers" />
+<outline type="rss" title="3Blue1Brown" text="3Blue1Brown" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw" htmlUrl="https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw" />
+<outline xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCOjD18EJYcsBog4IozkF_7w" type="rss" title="PyData" text="PyData" htmlUrl="https://www.youtube.com/channel/UCOjD18EJYcsBog4IozkF_7w" />
+<outline text="Dune" htmlUrl="https://www.youtube.com/channel/UCPrm9d2hLd_YxSExH7oRyAg" title="Dune" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCPrm9d2hLd_YxSExH7oRyAg" type="rss" />
+<outline xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCcIXc5mJsHVYTZR1maL5l9w" title="DeepLearningAI" htmlUrl="https://www.youtube.com/channel/UCcIXc5mJsHVYTZR1maL5l9w" text="DeepLearningAI" type="rss" />
+<outline text="CS50" title="CS50" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCcabW7890RKJzL968QWEykA" htmlUrl="https://www.youtube.com/channel/UCcabW7890RKJzL968QWEykA" />
+<outline text="Stanford Online" title="Stanford Online" xmlUrl="https://www.youtube.com/feeds/videos.xml?user=StanfordOnline" htmlUrl="https://www.youtube.com/channel/UCBa5G_ESCn8Yd4vw5U-gIcg" type="rss" />
+<outline xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCp3a0vIbwtVGtMVIfIsKvCQ" htmlUrl="https://www.youtube.com/channel/UCp3a0vIbwtVGtMVIfIsKvCQ" type="rss" title="ML Collective" text="ML Collective" />
+<outline type="rss" title="The Full Stack" htmlUrl="https://www.youtube.com/channel/UCVchfoB65aVtQiDITbGq2LQ" text="The Full Stack" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCVchfoB65aVtQiDITbGq2LQ" />
+<outline htmlUrl="https://www.youtube.com/channel/UCSD0dLRGQk_T-D3RvpM5aFQ" title="WeAreDevelopers" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCSD0dLRGQk_T-D3RvpM5aFQ" text="WeAreDevelopers" type="rss" />
 </outline>
 <outline title="DataSci" text="DataSci">
-<outline htmlUrl="https://engineering.fb.com/" type="rss" text="Engineering at Meta" xmlUrl="https://engineering.fb.com/feed/" title="Engineering at Meta" />
-<outline text="Google AI Blog" xmlUrl="http://feeds.feedburner.com/blogspot/gJZg" htmlUrl="http://blog.research.google/" title="Google AI Blog" type="rss" />
-<outline htmlUrl="https://blog.tensorflow.org/" type="rss" xmlUrl="https://blog.tensorflow.org/feeds/posts/default" title="The TensorFlow Blog" text="The TensorFlow Blog" />
-<outline type="rss" text="PyTorch Website" htmlUrl="https://pytorch.org/" title="PyTorch Website" xmlUrl="https://pytorch.org/feed.xml" />
-<outline title="KDnuggets" xmlUrl="https://www.kdnuggets.com/feed/" text="KDnuggets" htmlUrl="https://www.kdnuggets.com" type="rss" />
-<outline htmlUrl="https://openai.com/blog" xmlUrl="https://openai.com/blog/rss/" type="rss" title="OpenAI Blog" text="OpenAI Blog" />
-<outline htmlUrl="https://www.databricks.com" xmlUrl="https://www.databricks.com/feed" type="rss" title="Databricks – Databricks" text="Databricks – Databricks" />
-<outline type="rss" htmlUrl="https://hdsr.mitpress.mit.edu" text="Harvard Data Science Review" xmlUrl="https://hdsr.mitpress.mit.edu/rss.xml" title="Harvard Data Science Review" />
-<outline htmlUrl="https://medium.com/airbnb-engineering/tagged/data-science?source=rss----53c7c27702d5--data_science" xmlUrl="https://medium.com/feed/airbnb-engineering/tagged/data-science" type="rss" title="Data Science in The Airbnb Tech Blog on Medium" text="Data Science in The Airbnb Tech Blog on Medium" />
-<outline type="rss" title="Data Science Blog" text="Data Science Blog" htmlUrl="https://nycdatascience.com/blog" xmlUrl="https://nycdatascience.com/blog/feed/" />
-<outline text="Data Science in Lyft Engineering on Medium" title="Data Science in Lyft Engineering on Medium" xmlUrl="https://medium.com/feed/lyft-engineering/tagged/data-science" type="rss" htmlUrl="https://eng.lyft.com/tagged/data-science?source=rss----25cd379abb8--data_science" />
-<outline xmlUrl="https://booking.ai/feed" text="Booking.com Data Science - Medium" type="rss" title="Booking.com Data Science - Medium" htmlUrl="https://booking.ai?source=rss----4d265f07defc---4" />
-<outline text="The SAS Data Science Blog" title="The SAS Data Science Blog" xmlUrl="https://blogs.sas.com/content/subconsciousmusings/feed/" htmlUrl="https://blogs.sas.com/content/subconsciousmusings/" type="rss" />
+<outline htmlUrl="https://engineering.fb.com/" title="Engineering at Meta" text="Engineering at Meta" xmlUrl="https://engineering.fb.com/feed/" type="rss" />
+<outline htmlUrl="http://blog.research.google/" title="Google AI Blog" text="Google AI Blog" type="rss" xmlUrl="http://feeds.feedburner.com/blogspot/gJZg" />
+<outline title="The TensorFlow Blog" text="The TensorFlow Blog" htmlUrl="https://blog.tensorflow.org/" xmlUrl="https://blog.tensorflow.org/feeds/posts/default" type="rss" />
+<outline title="PyTorch Website" type="rss" text="PyTorch Website" htmlUrl="https://pytorch.org/" xmlUrl="https://pytorch.org/feed.xml" />
+<outline text="KDnuggets" xmlUrl="https://www.kdnuggets.com/feed/" type="rss" title="KDnuggets" htmlUrl="https://www.kdnuggets.com" />
+<outline text="OpenAI Blog" title="OpenAI Blog" htmlUrl="https://openai.com/blog" type="rss" xmlUrl="https://openai.com/blog/rss/" />
+<outline text="Databricks – Databricks" htmlUrl="https://www.databricks.com" xmlUrl="https://www.databricks.com/feed" type="rss" title="Databricks – Databricks" />
+<outline text="Harvard Data Science Review" title="Harvard Data Science Review" type="rss" htmlUrl="https://hdsr.mitpress.mit.edu" xmlUrl="https://hdsr.mitpress.mit.edu/rss.xml" />
+<outline text="Data Science in The Airbnb Tech Blog on Medium" type="rss" xmlUrl="https://medium.com/feed/airbnb-engineering/tagged/data-science" title="Data Science in The Airbnb Tech Blog on Medium" htmlUrl="https://medium.com/airbnb-engineering/tagged/data-science?source=rss----53c7c27702d5--data_science" />
+<outline type="rss" text="Data Science Blog" htmlUrl="https://nycdatascience.com/blog" xmlUrl="https://nycdatascience.com/blog/feed/" title="Data Science Blog" />
+<outline xmlUrl="https://medium.com/feed/lyft-engineering/tagged/data-science" title="Data Science in Lyft Engineering on Medium" htmlUrl="https://eng.lyft.com/tagged/data-science?source=rss----25cd379abb8--data_science" type="rss" text="Data Science in Lyft Engineering on Medium" />
+<outline htmlUrl="https://booking.ai?source=rss----4d265f07defc---4" type="rss" xmlUrl="https://booking.ai/feed" title="Booking.com Data Science - Medium" text="Booking.com Data Science - Medium" />
+<outline type="rss" text="The SAS Data Science Blog" xmlUrl="https://blogs.sas.com/content/subconsciousmusings/feed/" title="The SAS Data Science Blog" htmlUrl="https://blogs.sas.com/content/subconsciousmusings/" />
 </outline>
-<outline title="EVs" text="EVs">
-<outline htmlUrl="https://www.youtube.com/channel/UCzz4CoEgSgWNs9ZAvRMhW2A" title="Fully Charged Show" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?user=fullychargedshow" text="Fully Charged Show" />
-<outline xmlUrl="http://www.theverge.com/transportation/rss/index.xml" title="The Verge -  Transpo Posts" htmlUrl="https://www.theverge.com/transportation" text="The Verge -  Transpo Posts" type="rss" />
-<outline title="Auto Focus" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC2J-0g_nxlwcD9JBK1eTleQ" type="rss" text="Auto Focus" htmlUrl="https://www.youtube.com/channel/UC2J-0g_nxlwcD9JBK1eTleQ" />
-<outline htmlUrl="https://www.theverge.com/transportation" title="The Verge - Transpo Posts" type="rss" xmlUrl="http://www.theverge.com/transportation/rss/index.xml" text="The Verge - Transpo Posts" />
+<outline text="EVs" title="EVs">
+<outline text="Fully Charged Show" htmlUrl="https://www.youtube.com/channel/UCzz4CoEgSgWNs9ZAvRMhW2A" xmlUrl="https://www.youtube.com/feeds/videos.xml?user=fullychargedshow" type="rss" title="Fully Charged Show" />
+<outline type="rss" text="The Verge -  Transpo Posts" htmlUrl="https://www.theverge.com/transportation" xmlUrl="http://www.theverge.com/transportation/rss/index.xml" title="The Verge -  Transpo Posts" />
+<outline xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC2J-0g_nxlwcD9JBK1eTleQ" title="Auto Focus" type="rss" text="Auto Focus" htmlUrl="https://www.youtube.com/channel/UC2J-0g_nxlwcD9JBK1eTleQ" />
+<outline text="The Verge - Transpo Posts" title="The Verge - Transpo Posts" type="rss" htmlUrl="https://www.theverge.com/transportation" xmlUrl="http://www.theverge.com/transportation/rss/index.xml" />
 </outline>
 <outline title="LifeStyle" text="LifeStyle">
-<outline xmlUrl="https://www.cicnews.com/feed" title="CIC News" htmlUrl="https://www.cicnews.com" type="rss" text="CIC News" />
+<outline xmlUrl="https://www.cicnews.com/feed" text="CIC News" htmlUrl="https://www.cicnews.com" type="rss" title="CIC News" />
 </outline>
-<outline title="Medium" text="Medium">
-<outline title="Salesforce Engineering Blog" type="rss" htmlUrl="https://engineering.salesforce.com/" text="Salesforce Engineering Blog" xmlUrl="https://engineering.salesforce.com/feed/" />
-<outline title="The Airbnb Tech Blog - Medium" text="The Airbnb Tech Blog - Medium" type="rss" xmlUrl="https://medium.com/feed/airbnb-engineering" htmlUrl="https://medium.com/airbnb-engineering?source=rss----53c7c27702d5---4" />
-<outline title="Stories by Netflix Technology Blog on Medium" xmlUrl="https://netflixtechblog.medium.com/feed" type="rss" text="Stories by Netflix Technology Blog on Medium" htmlUrl="https://medium.com/@netflixtechblog?source=rss-c3aeaf49d8a4------2" />
-<outline text="Canva - Engineering Blog" htmlUrl="https://www.canva.dev/blog/engineering/" type="rss" xmlUrl="https://canvatechblog.com/feed" title="Canva - Engineering Blog" />
-<outline type="rss" text="The Coinbase Blog - Medium" htmlUrl="https://medium.com/the-coinbase-blog?source=rss----c114225aeaf7---4" xmlUrl="https://medium.com/feed/the-coinbase-blog" title="The Coinbase Blog - Medium" />
+<outline text="Medium" title="Medium">
+<outline type="rss" text="Salesforce Engineering Blog" htmlUrl="https://engineering.salesforce.com/" xmlUrl="https://engineering.salesforce.com/feed/" title="Salesforce Engineering Blog" />
+<outline title="The Airbnb Tech Blog - Medium" type="rss" htmlUrl="https://medium.com/airbnb-engineering?source=rss----53c7c27702d5---4" xmlUrl="https://medium.com/feed/airbnb-engineering" text="The Airbnb Tech Blog - Medium" />
+<outline htmlUrl="https://medium.com/@netflixtechblog?source=rss-c3aeaf49d8a4------2" xmlUrl="https://netflixtechblog.medium.com/feed" title="Stories by Netflix Technology Blog on Medium" type="rss" text="Stories by Netflix Technology Blog on Medium" />
+<outline type="rss" htmlUrl="https://www.canva.dev/blog/engineering/" text="Canva - Engineering Blog" xmlUrl="https://canvatechblog.com/feed" title="Canva - Engineering Blog" />
+<outline htmlUrl="https://medium.com/the-coinbase-blog?source=rss----c114225aeaf7---4" type="rss" text="The Coinbase Blog - Medium" xmlUrl="https://medium.com/feed/the-coinbase-blog" title="The Coinbase Blog - Medium" />
 </outline>
-<outline title="News" text="News">
-<outline title="All Content from Business Insider" htmlUrl="https://feeds.businessinsider.com,%20feeds.businessinsider.com/pull/bi/all?after=20&amp;limit=20&amp;toDate=2023-11-12T08%3A53%3A46Z" text="All Content from Business Insider" type="rss" xmlUrl="https://feeds.businessinsider.com/custom/all" />
-<outline htmlUrl="https://www.scmp.com" xmlUrl="http://www.scmp.com/rss/92/feed" type="rss" title="Business - South China Morning Post" text="Business - South China Morning Post" />
+<outline text="News" title="News">
+<outline text="All Content from Business Insider" htmlUrl="https://feeds.businessinsider.com/pull/bi/all?after=20&amp;limit=20&amp;toDate=2023-11-12T15%3A02%3A32Z" type="rss" xmlUrl="https://feeds.businessinsider.com/custom/all" title="All Content from Business Insider" />
+<outline title="Business - South China Morning Post" htmlUrl="https://www.scmp.com" type="rss" text="Business - South China Morning Post" xmlUrl="http://www.scmp.com/rss/92/feed" />
 </outline>
-<outline text="Tech" title="Tech">
-<outline type="rss" xmlUrl="https://tailscale.com/blog/index.xml" htmlUrl="https://tailscale.com/blog/" text="Blog on Tailscale" title="Blog on Tailscale" />
-<outline htmlUrl="https://www.backblaze.com/blog/" title="Backblaze Blog | Cloud Storage &amp; Cloud Backup" text="Backblaze Blog | Cloud Storage &amp; Cloud Backup" type="rss" xmlUrl="https://www.backblaze.com/blog/feed/" />
-<outline text="Bloomberg Technology" htmlUrl="https://www.youtube.com/channel/UCrM7B7SL_g1edFOnmj-SDKg" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCrM7B7SL_g1edFOnmj-SDKg" title="Bloomberg Technology" type="rss" />
-<outline text="Tech - South China Morning Post" type="rss" title="Tech - South China Morning Post" htmlUrl="https://www.scmp.com" xmlUrl="http://www.scmp.com/rss/36/feed" />
-<outline text="The Verge - Tech Posts" title="The Verge - Tech Posts" xmlUrl="http://www.theverge.com/tech/rss/index.xml" htmlUrl="https://www.theverge.com/tech" type="rss" />
-<outline type="rss" htmlUrl="https://www.nytimes.com/section/technology" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml" title="NYT &gt; Technology" text="NYT &gt; Technology" />
-<outline title="The Verge -  Artificial Intelligences" htmlUrl="https://www.theverge.com/ai-artificial-intelligence" xmlUrl="https://www.theverge.com/rss/ai-artificial-intelligence/index.xml" text="The Verge -  Artificial Intelligences" type="rss" />
-<outline text="MIT News - Computer Science and Artificial Intelligence Laboratory (CSAIL)" type="rss" title="MIT News - Computer Science and Artificial Intelligence Laboratory (CSAIL)" xmlUrl="http://web.mit.edu/newsoffice/topic/mitcomputers-rss.xml" htmlUrl="https://news.mit.edu/topic/mitcomputers-rss.xml" />
-<outline type="rss" text="TechCrunch" htmlUrl="https://techcrunch.com/" title="TechCrunch" xmlUrl="https://techcrunch.com/feed/" />
-<outline text="Amazon Science homepage" type="rss" htmlUrl="https://www.amazon.science/" xmlUrl="https://www.amazon.science/index.rss" title="Amazon Science homepage" />
-<outline xmlUrl="https://news.crunchbase.com/feed/" type="rss" title="Crunchbase News" text="Crunchbase News" htmlUrl="https://news.crunchbase.com/" />
-<outline title="Marques Brownlee" text="Marques Brownlee" xmlUrl="https://www.youtube.com/feeds/videos.xml?user=MarquesBrownlee" type="rss" htmlUrl="https://www.youtube.com/channel/UCBJycsmduvYEL83R_U4JriQ" />
-<outline type="rss" xmlUrl="https://www.theverge.com/policy/rss/index.xml" text="The Verge - Policy Posts" title="The Verge - Policy Posts" htmlUrl="https://www.theverge.com/policy" />
-<outline xmlUrl="https://www.theverge.com/rss/tiktok/index.xml" htmlUrl="https://www.theverge.com/tiktok" title="The Verge - TikToks" text="The Verge - TikToks" type="rss" />
-<outline title="MIT News - Computer Science and Artificial Intelligence Laboratory (CSAIL)" xmlUrl="http://web.mit.edu/newsoffice/topic/mitcomputers-rss.xml" htmlUrl="https://news.mit.edu/topic/mitcomputers-rss.xml" text="MIT News - Computer Science and Artificial Intelligence Laboratory (CSAIL)" type="rss" />
-<outline type="rss" text="Microsoft Research Blog - Microsoft Research" title="Microsoft Research Blog - Microsoft Research" htmlUrl="https://www.microsoft.com/en-us/research/blog/" xmlUrl="http://research.microsoft.com/rss/news.xml" />
+<outline title="Tech" text="Tech">
+<outline type="rss" text="Blog on Tailscale" xmlUrl="https://tailscale.com/blog/index.xml" title="Blog on Tailscale" htmlUrl="https://tailscale.com/blog/" />
+<outline htmlUrl="https://www.backblaze.com/blog/" xmlUrl="https://www.backblaze.com/blog/feed/" text="Backblaze Blog | Cloud Storage &amp; Cloud Backup" title="Backblaze Blog | Cloud Storage &amp; Cloud Backup" type="rss" />
+<outline xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCrM7B7SL_g1edFOnmj-SDKg" htmlUrl="https://www.youtube.com/channel/UCrM7B7SL_g1edFOnmj-SDKg" title="Bloomberg Technology" type="rss" text="Bloomberg Technology" />
+<outline htmlUrl="https://www.scmp.com" type="rss" title="Tech - South China Morning Post" text="Tech - South China Morning Post" xmlUrl="http://www.scmp.com/rss/36/feed" />
+<outline title="The Verge - Tech Posts" type="rss" text="The Verge - Tech Posts" htmlUrl="https://www.theverge.com/tech" xmlUrl="http://www.theverge.com/tech/rss/index.xml" />
+<outline htmlUrl="https://www.nytimes.com/section/technology" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml" type="rss" text="NYT &gt; Technology" title="NYT &gt; Technology" />
+<outline htmlUrl="https://www.theverge.com/ai-artificial-intelligence" xmlUrl="https://www.theverge.com/rss/ai-artificial-intelligence/index.xml" type="rss" title="The Verge -  Artificial Intelligences" text="The Verge -  Artificial Intelligences" />
+<outline text="MIT News - Computer Science and Artificial Intelligence Laboratory (CSAIL)" htmlUrl="https://news.mit.edu/topic/mitcomputers-rss.xml" xmlUrl="http://web.mit.edu/newsoffice/topic/mitcomputers-rss.xml" type="rss" title="MIT News - Computer Science and Artificial Intelligence Laboratory (CSAIL)" />
+<outline title="TechCrunch" text="TechCrunch" type="rss" htmlUrl="https://techcrunch.com/" xmlUrl="https://techcrunch.com/feed/" />
+<outline xmlUrl="https://www.amazon.science/index.rss" text="Amazon Science homepage" htmlUrl="https://www.amazon.science/" type="rss" title="Amazon Science homepage" />
+<outline text="Crunchbase News" htmlUrl="https://news.crunchbase.com/" xmlUrl="https://news.crunchbase.com/feed/" type="rss" title="Crunchbase News" />
+<outline text="Marques Brownlee" type="rss" title="Marques Brownlee" htmlUrl="https://www.youtube.com/channel/UCBJycsmduvYEL83R_U4JriQ" xmlUrl="https://www.youtube.com/feeds/videos.xml?user=MarquesBrownlee" />
+<outline text="The Verge - Policy Posts" title="The Verge - Policy Posts" type="rss" xmlUrl="https://www.theverge.com/policy/rss/index.xml" htmlUrl="https://www.theverge.com/policy" />
+<outline htmlUrl="https://www.theverge.com/tiktok" xmlUrl="https://www.theverge.com/rss/tiktok/index.xml" title="The Verge - TikToks" type="rss" text="The Verge - TikToks" />
+<outline text="MIT News - Computer Science and Artificial Intelligence Laboratory (CSAIL)" htmlUrl="https://news.mit.edu/topic/mitcomputers-rss.xml" title="MIT News - Computer Science and Artificial Intelligence Laboratory (CSAIL)" type="rss" xmlUrl="http://web.mit.edu/newsoffice/topic/mitcomputers-rss.xml" />
+<outline xmlUrl="http://research.microsoft.com/rss/news.xml" text="Microsoft Research Blog - Microsoft Research" title="Microsoft Research Blog - Microsoft Research" type="rss" htmlUrl="https://www.microsoft.com/en-us/research/blog/" />
 </outline>
-<outline text="Travel" title="Travel">
-<outline text="travel.state.gov: Travel Advisories" title="travel.state.gov: Travel Advisories" type="rss" htmlUrl="http://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html" xmlUrl="https://travel.state.gov/_res/rss/TAsTWs.xml" />
+<outline title="Travel" text="Travel">
+<outline title="travel.state.gov: Travel Advisories" xmlUrl="https://travel.state.gov/_res/rss/TAsTWs.xml" text="travel.state.gov: Travel Advisories" type="rss" htmlUrl="http://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html" />
 </outline>
 <outline title="VC" text="VC">
-<outline title="a16z" htmlUrl="https://www.youtube.com/channel/UC9cn0TuPq4dnbTY-CBsm8XA" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC9cn0TuPq4dnbTY-CBsm8XA" text="a16z" type="rss" />
-<outline text="Sequoia Capital" title="Sequoia Capital" type="rss" htmlUrl="https://www.sequoiacap.com/" xmlUrl="https://www.sequoiacap.com/feed/" />
-<outline title="Andreessen Horowitz" htmlUrl="https://a16z.com/" xmlUrl="https://a16z.com/feed" type="rss" text="Andreessen Horowitz" />
-<outline text="Founders Fund" xmlUrl="https://foundersfund.com/feed/" htmlUrl="https://foundersfund.com/" type="rss" title="Founders Fund" />
-<outline title="ValueWalk" text="ValueWalk" type="rss" htmlUrl="https://www.valuewalk.com" xmlUrl="http://www.valuewalk.com/feed/" />
+<outline xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC9cn0TuPq4dnbTY-CBsm8XA" text="a16z" htmlUrl="https://www.youtube.com/channel/UC9cn0TuPq4dnbTY-CBsm8XA" type="rss" title="a16z" />
+<outline text="Sequoia Capital" title="Sequoia Capital" htmlUrl="https://www.sequoiacap.com/" xmlUrl="https://www.sequoiacap.com/feed/" type="rss" />
+<outline type="rss" xmlUrl="https://a16z.com/feed" htmlUrl="https://a16z.com/" title="Andreessen Horowitz" text="Andreessen Horowitz" />
+<outline type="rss" htmlUrl="https://foundersfund.com/" title="Founders Fund" text="Founders Fund" xmlUrl="https://foundersfund.com/feed/" />
+<outline title="ValueWalk" xmlUrl="http://www.valuewalk.com/feed/" type="rss" htmlUrl="https://www.valuewalk.com" text="ValueWalk" />
 </outline>
 <outline text="Web3" title="Web3">
-<outline xmlUrl="https://blog.web3labs.com/rss.xml" htmlUrl="https://blog.web3labs.com" type="rss" title="The Web3 Labs Blog" text="The Web3 Labs Blog" />
-<outline xmlUrl="https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml" title="CoinDesk: Bitcoin, Ethereum, Crypto News and Price Data" type="rss" text="CoinDesk: Bitcoin, Ethereum, Crypto News and Price Data" htmlUrl="https://www.coindesk.com" />
+<outline type="rss" xmlUrl="https://blog.web3labs.com/rss.xml" text="The Web3 Labs Blog" htmlUrl="https://blog.web3labs.com" title="The Web3 Labs Blog" />
+<outline htmlUrl="https://www.coindesk.com" text="CoinDesk: Bitcoin, Ethereum, Crypto News and Price Data" title="CoinDesk: Bitcoin, Ethereum, Crypto News and Price Data" type="rss" xmlUrl="https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml" />
 </outline>
-<outline text="加密货币" title="加密货币">
-<outline text="PANews News" xmlUrl="https://rss.panewslab.com/zh/gtimg/rss" type="rss" htmlUrl="https://rss.panewslab.com/" title="PANews News" />
+<outline title="加密货币" text="加密货币">
+<outline text="PANews News" title="PANews News" type="rss" htmlUrl="https://rss.panewslab.com/" xmlUrl="https://rss.panewslab.com/zh/gtimg/rss" />
 </outline>
 <outline title="博客" text="博客">
-<outline text="weixin_51484067的博客" xmlUrl="https://blog.csdn.net/weixin_51484067/rss/list?spm=1001.2014.3001.5494" type="rss" htmlUrl="https://blog.csdn.net/weixin_51484067" title="weixin_51484067的博客" />
-<outline title="Stories by 郭明錤 (Ming-Chi Kuo) on Medium" htmlUrl="https://medium.com/@mingchikuo?source=rss-d19afb905185------2" type="rss" text="Stories by 郭明錤 (Ming-Chi Kuo) on Medium" xmlUrl="https://medium.com/feed/@mingchikuo" />
-<outline type="rss" text="美团技术团队" title="美团技术团队" xmlUrl="https://tech.meituan.com/feed/" htmlUrl="https://tech.meituan.com/feed/" />
+<outline xmlUrl="https://blog.csdn.net/weixin_51484067/rss/list?spm=1001.2014.3001.5494" text="weixin_51484067的博客" type="rss" title="weixin_51484067的博客" htmlUrl="https://blog.csdn.net/weixin_51484067" />
+<outline text="Stories by 郭明錤 (Ming-Chi Kuo) on Medium" xmlUrl="https://medium.com/feed/@mingchikuo" htmlUrl="https://medium.com/@mingchikuo?source=rss-d19afb905185------2" title="Stories by 郭明錤 (Ming-Chi Kuo) on Medium" type="rss" />
+<outline xmlUrl="https://tech.meituan.com/feed/" text="美团技术团队" type="rss" htmlUrl="https://tech.meituan.com/feed/" title="美团技术团队" />
 </outline>
-<outline text="台灣" title="台灣">
-<outline htmlUrl="https://www.mac.gov.tw/News.aspx?n=B383123AEADAEE52&amp;sms=2B7F1AE4AC63A181" type="rss" title="大陸委員會新聞稿" text="大陸委員會新聞稿" xmlUrl="https://www.mac.gov.tw/OpenData.aspx?SN=D33B55D537402BAA" />
-<outline title="大陸委員會大陸與兩岸情勢簡報" text="大陸委員會大陸與兩岸情勢簡報" xmlUrl="https://www.mac.gov.tw/OpenData.aspx?SN=F9057F9640B28033" htmlUrl="https://www.mac.gov.tw/News.aspx?n=78702647C7A5B61B&amp;sms=25D4C64CAEE1E128" type="rss" />
-<outline htmlUrl="https://www.mac.gov.tw/News.aspx?n=A0A73CF7630B1B26&amp;sms=B69F3267D6C0F22D" xmlUrl="https://www.mac.gov.tw/OpenData.aspx?SN=FB01D469347C76A7" title="大陸委員會說明資料" text="大陸委員會說明資料" type="rss" />
+<outline title="台灣" text="台灣">
+<outline type="rss" text="大陸委員會新聞稿" title="大陸委員會新聞稿" htmlUrl="https://www.mac.gov.tw/News.aspx?n=B383123AEADAEE52&amp;sms=2B7F1AE4AC63A181" xmlUrl="https://www.mac.gov.tw/OpenData.aspx?SN=D33B55D537402BAA" />
+<outline text="大陸委員會大陸與兩岸情勢簡報" xmlUrl="https://www.mac.gov.tw/OpenData.aspx?SN=F9057F9640B28033" title="大陸委員會大陸與兩岸情勢簡報" type="rss" htmlUrl="https://www.mac.gov.tw/News.aspx?n=78702647C7A5B61B&amp;sms=25D4C64CAEE1E128" />
+<outline text="大陸委員會說明資料" type="rss" title="大陸委員會說明資料" htmlUrl="https://www.mac.gov.tw/News.aspx?n=A0A73CF7630B1B26&amp;sms=B69F3267D6C0F22D" xmlUrl="https://www.mac.gov.tw/OpenData.aspx?SN=FB01D469347C76A7" />
 </outline>
-<outline title="投资" text="投资">
-<outline xmlUrl="https://rsshub.app/aicaijing/latest" text="AI 财经社 - 最新文章" title="AI 财经社 - 最新文章" type="rss" htmlUrl="https://www.aicaijing.com.cn" />
-<outline htmlUrl="https://www.gelonghui.com" type="rss" title="格隆汇-财经资讯动态-股市行情" xmlUrl="https://rsshub.app/gelonghui/home" text="格隆汇-财经资讯动态-股市行情" />
+<outline text="投资" title="投资">
+<outline xmlUrl="https://rsshub.app/aicaijing/latest" title="AI 财经社 - 最新文章" text="AI 财经社 - 最新文章" htmlUrl="https://www.aicaijing.com.cn" type="rss" />
+<outline text="格隆汇-财经资讯动态-股市行情" xmlUrl="https://rsshub.app/gelonghui/home" title="格隆汇-财经资讯动态-股市行情" htmlUrl="https://www.gelonghui.com" type="rss" />
 </outline>
-<outline title="数据科学" text="数据科学">
-<outline text="掘金专栏-字节跳动技术团队" htmlUrl="https://juejin.cn/user/1838039172387262/posts" type="rss" title="掘金专栏-字节跳动技术团队" xmlUrl="https://rsshub.app/juejin/posts/1838039172387262" />
-<outline type="rss" text="数据洞察|DT" htmlUrl="https://dtcj.com/datainsight" xmlUrl="https://rsshub.app/dtcj/datainsight/" title="数据洞察|DT" />
-<outline text="阿里技术" htmlUrl="https://mp.weixin.qq.com" type="rss" xmlUrl="https://api.feeddd.org/feeds/612c4e602b6da10dfaec7645" title="阿里技术" />
-<outline title="全部 - dbaplus社群" xmlUrl="https://rsshub.app/dbaplus" text="全部 - dbaplus社群" htmlUrl="https://dbaplus.cn" type="rss" />
+<outline text="数据科学" title="数据科学">
+<outline title="掘金专栏-字节跳动技术团队" xmlUrl="https://rsshub.app/juejin/posts/1838039172387262" text="掘金专栏-字节跳动技术团队" type="rss" htmlUrl="https://juejin.cn/user/1838039172387262/posts" />
+<outline xmlUrl="https://rsshub.app/dtcj/datainsight/" htmlUrl="https://dtcj.com/datainsight" type="rss" title="数据洞察|DT" text="数据洞察|DT" />
+<outline xmlUrl="https://api.feeddd.org/feeds/612c4e602b6da10dfaec7645" title="阿里技术" text="阿里技术" type="rss" htmlUrl="https://mp.weixin.qq.com" />
+<outline htmlUrl="https://dbaplus.cn" type="rss" xmlUrl="https://rsshub.app/dbaplus" text="全部 - dbaplus社群" title="全部 - dbaplus社群" />
 </outline>
 <outline title="新闻" text="新闻">
-<outline type="rss" htmlUrl="https://www.inside.com.tw/feed/rss" text="INSIDE" xmlUrl="https://www.inside.com.tw/feed/rss" title="INSIDE" />
-<outline title="TechNews 科技新報" type="rss" htmlUrl="https://technews.tw" xmlUrl="https://cdn.technews.tw/feed/" text="TechNews 科技新報" />
-<outline title="BBC Chinese - 主頁" htmlUrl="http://www.bbcchinese.com" type="rss" text="BBC Chinese - 主頁" xmlUrl="https://feeds.bbci.co.uk/zhongwen/trad/rss.xml" />
-<outline text="紐約時報中文網 國際縱覽" type="rss" htmlUrl="https://cn.nytimes.com" title="紐約時報中文網 國際縱覽" xmlUrl="https://cn.nytimes.com/rss/zh-hant/" />
-<outline title="端傳媒 Initium Media" text="端傳媒 Initium Media" htmlUrl="https://theinitium.com/newsfeed/" type="rss" xmlUrl="https://theinitium.com/newsfeed/" />
-<outline xmlUrl="https://zh.cn.nikkei.com/rss.html" htmlUrl="https://zh.cn.nikkei.com/" type="rss" title="日經中文網" text="日經中文網" />
-<outline title="法廣 - 時事與新聞直播 - RFI - 法國國際廣播電台" text="法廣 - 時事與新聞直播 - RFI - 法國國際廣播電台" htmlUrl="https://www.rfi.fr/tw/" xmlUrl="https://www.rfi.fr/tw/rss" type="rss" />
+<outline xmlUrl="https://www.inside.com.tw/feed/rss" type="rss" text="INSIDE" title="INSIDE" htmlUrl="https://www.inside.com.tw/feed/rss" />
+<outline title="TechNews 科技新報" text="TechNews 科技新報" type="rss" xmlUrl="https://cdn.technews.tw/feed/" htmlUrl="https://technews.tw" />
+<outline htmlUrl="http://www.bbcchinese.com" title="BBC Chinese - 主頁" text="BBC Chinese - 主頁" type="rss" xmlUrl="https://feeds.bbci.co.uk/zhongwen/trad/rss.xml" />
+<outline text="紐約時報中文網 國際縱覽" type="rss" htmlUrl="https://cn.nytimes.com" xmlUrl="https://cn.nytimes.com/rss/zh-hant/" title="紐約時報中文網 國際縱覽" />
+<outline text="端傳媒 Initium Media" title="端傳媒 Initium Media" type="rss" htmlUrl="https://theinitium.com/newsfeed/" xmlUrl="https://theinitium.com/newsfeed/" />
+<outline type="rss" xmlUrl="https://zh.cn.nikkei.com/rss.html" htmlUrl="https://zh.cn.nikkei.com/" text="日經中文網" title="日經中文網" />
+<outline htmlUrl="https://www.rfi.fr/tw/" type="rss" xmlUrl="https://www.rfi.fr/tw/rss" text="法廣 - 時事與新聞直播 - RFI - 法國國際廣播電台" title="法廣 - 時事與新聞直播 - RFI - 法國國際廣播電台" />
+<outline type="rss" htmlUrl="https://theme.udn.com" xmlUrl="https://theme.udn.com/rss/news/1004/6772/6773?ch=theme" title="時事話題 | 聯合新聞網" text="時事話題 | 聯合新聞網" />
+<outline text="Google 快訊 - 賴清德" type="rss" title="Google 快訊 - 賴清德" htmlUrl="https://www.google.com/alerts/feeds/08249870265434327580/12452497033829026355" xmlUrl="https://www.google.com.tw/alerts/feeds/08249870265434327580/12452497033829026355" />
+<outline xmlUrl="https://www.google.com.tw/alerts/feeds/08249870265434327580/16749597124563475853" htmlUrl="https://www.google.com/alerts/feeds/08249870265434327580/16749597124563475853" text="Google 快訊 - 柯文哲" title="Google 快訊 - 柯文哲" type="rss" />
+<outline title="Google 快訊 - 郭台銘" xmlUrl="https://www.google.com.tw/alerts/feeds/08249870265434327580/11765551117450008233" text="Google 快訊 - 郭台銘" type="rss" htmlUrl="https://www.google.com/alerts/feeds/08249870265434327580/11765551117450008233" />
+<outline type="rss" title="Google 快訊 - 侯友宜" xmlUrl="https://www.google.com.tw/alerts/feeds/08249870265434327580/16368151924417450648" htmlUrl="https://www.google.com/alerts/feeds/08249870265434327580/16368151924417450648" text="Google 快訊 - 侯友宜" />
 </outline>
 <outline title="新闻播报" text="新闻播报">
-<outline type="rss" xmlUrl="https://rsshub.app/fastbull/express-news" title="实时财经快讯 - FastBull" htmlUrl="https://www.fastbull.cn/express-news" text="实时财经快讯 - FastBull" />
-<outline text="格隆汇快讯-7x24小时市场快讯-财经市场热点" title="格隆汇快讯-7x24小时市场快讯-财经市场热点" type="rss" htmlUrl="https://www.gelonghui.com/live" xmlUrl="https://rsshub.app/gelonghui/live" />
-<outline title="华尔街见闻 - 实时快讯 - 要闻" xmlUrl="https://rsshub.app/wallstreetcn/live" htmlUrl="https://wallstreetcn.com/live/global" type="rss" text="华尔街见闻 - 实时快讯 - 要闻" />
-<outline type="rss" text="虎嗅网" title="虎嗅网" htmlUrl="http://www.huxiu.com" xmlUrl="https://www.huxiu.com/rss/0.xml" />
-<outline title="36氪" text="36氪" htmlUrl="http://36kr.com" xmlUrl="http://36kr.com/feed" type="rss" />
+<outline type="rss" xmlUrl="https://rsshub.app/fastbull/express-news" title="实时财经快讯 - FastBull" text="实时财经快讯 - FastBull" htmlUrl="https://www.fastbull.cn/express-news" />
+<outline title="格隆汇快讯-7x24小时市场快讯-财经市场热点" htmlUrl="https://www.gelonghui.com/live" xmlUrl="https://rsshub.app/gelonghui/live" text="格隆汇快讯-7x24小时市场快讯-财经市场热点" type="rss" />
+<outline xmlUrl="https://rsshub.app/wallstreetcn/live" text="华尔街见闻 - 实时快讯 - 要闻" title="华尔街见闻 - 实时快讯 - 要闻" type="rss" htmlUrl="https://wallstreetcn.com/live/global" />
+<outline text="虎嗅网" type="rss" htmlUrl="http://www.huxiu.com" title="虎嗅网" xmlUrl="https://www.huxiu.com/rss/0.xml" />
+<outline htmlUrl="http://36kr.com" title="36氪" type="rss" xmlUrl="http://36kr.com/feed" text="36氪" />
 </outline>
-<outline title="科技" text="科技">
-<outline xmlUrl="http://technews.tw/feed/" title="TechNews 科技新報" type="rss" text="TechNews 科技新報" htmlUrl="https://technews.tw" />
-<outline title="机器之心" text="机器之心" xmlUrl="https://www.jiqizhixin.com/rss" type="rss" htmlUrl="https://www.jiqizhixin.com/" />
-<outline title="量子位" xmlUrl="https://www.qbitai.com/feed" type="rss" text="量子位" htmlUrl="https://www.qbitai.com" />
-<outline text="硅谷101" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCKV2yWPB3wn0RTZh3cTD8YA" title="硅谷101" htmlUrl="https://www.youtube.com/channel/UCKV2yWPB3wn0RTZh3cTD8YA" />
-<outline type="rss" htmlUrl="https://buzzorange.com/techorange/" title="TechOrange 科技報橘" text="TechOrange 科技報橘" xmlUrl="http://feeds.feedburner.com/techorange" />
-<outline type="rss" htmlUrl="https://www.youtube.com/channel/UC-6OW5aJYBFM33zXQlBKPNA" xmlUrl="https://www.youtube.com/feeds/videos.xml?user=Engadget" text="Engadget" title="Engadget" />
+<outline text="科技" title="科技">
+<outline type="rss" text="TechNews 科技新報" htmlUrl="https://technews.tw" title="TechNews 科技新報" xmlUrl="http://technews.tw/feed/" />
+<outline xmlUrl="https://www.jiqizhixin.com/rss" title="机器之心" text="机器之心" type="rss" htmlUrl="https://www.jiqizhixin.com/" />
+<outline xmlUrl="https://www.qbitai.com/feed" type="rss" text="量子位" title="量子位" htmlUrl="https://www.qbitai.com" />
+<outline type="rss" title="硅谷101" htmlUrl="https://www.youtube.com/channel/UCKV2yWPB3wn0RTZh3cTD8YA" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCKV2yWPB3wn0RTZh3cTD8YA" text="硅谷101" />
+<outline htmlUrl="https://buzzorange.com/techorange/" title="TechOrange 科技報橘" type="rss" text="TechOrange 科技報橘" xmlUrl="http://feeds.feedburner.com/techorange" />
+<outline htmlUrl="https://www.youtube.com/channel/UC-6OW5aJYBFM33zXQlBKPNA" title="Engadget" xmlUrl="https://www.youtube.com/feeds/videos.xml?user=Engadget" type="rss" text="Engadget" />
 </outline>
 </body>
 </opml>
