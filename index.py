@@ -107,7 +107,7 @@ def post_interval(current_time):
     return (min_tweet_interval,max_tweet_interval)
 
 
-def tweet_job(language,timezone):
+def tweet_job(sys_prompt,timezone):
     time_zone=pytz.timezone(timezone)
     while True:
         try:
@@ -140,7 +140,7 @@ def tweet_job(language,timezone):
                 if 'youtube' not in news_url:
                     prompts=f"title:{news_title} || description:{new_description}"
                     logger.info(f"Prompts:{prompts}")
-                    tweets=generate_tweet(openai_api_key,prompts,language)
+                    tweets=generate_tweet(openai_api_key,prompts,sys_prompt)
                     
                     #加上news link
                     tweets += f" {news_url}"
@@ -178,12 +178,12 @@ def tweet_job(language,timezone):
 
 
 
-def schedule_job(news_req_interval:int=1,category:list=[],publish_time:int=60,language_to_tweet:str="English",timezone='America/New_York'):
+def schedule_job(news_req_interval:int=1,category:list=[],publish_time:int=60,sys_prompt:str="",timezone='America/New_York'):
     #创建获取feeds线程
     thread_rss=threading.Thread(target=news_queue,args=(news_req_interval,category,publish_time,),name="RSS")
 
     # 创建线程来并行执行任务
-    thread_tweet = threading.Thread(target=tweet_job,args=(language_to_tweet,timezone,), name="TWEET")
+    thread_tweet = threading.Thread(target=tweet_job,args=(sys_prompt,timezone,), name="TWEET")
     
     #创建重置任务计数线程
     thread_counter = threading.Thread(target=reset_job_counter,args=(timezone,), name="JOB_COUNTER")
@@ -242,11 +242,11 @@ if __name__ == "__main__":
 
     # 指定目标时区\语言\主题
     us_timezone = config['general']["TIMEZONE"]
-    language_to_tweet=config['general']["LANGUAGE"]
+    sys_prompt=config['system prompt']["PROMPT"]
     rss_category= config['general']["TOPICS"].replace(' ','').split(',') 
     
 
-    schedule_job(news_req_interval,rss_category,publish_time_limt,language_to_tweet,us_timezone)
+    schedule_job(news_req_interval,rss_category,publish_time_limt,sys_prompt,us_timezone)
 
     
 

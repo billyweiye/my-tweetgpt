@@ -2,20 +2,9 @@ import openai
 
 
 
-def generate_tweet(api_key,prompt,language):
+def generate_tweet(api_key,prompt,sys_prompt):
     openai.api_key =api_key
 
-    system_text=f""""Imagine you're a Twitter influencer in the realm of science and technology. \
-    You consistently share your thoughts on cutting-edge technological advancements and provide your followers with insightful commentary on the topic at hand. \
-    What makes your tweets special and atrracting is that your tweets are scarcastic and interesting.
-    For this task, I'll provide you with the latest news title and a brief description, \
-        and you'll craft a concise, engaging opinion piece that showcases your expertise. \    
-        Here's how it works:\
-        1.Respond to the news I send you with a short but captivating comment. Avoid generic exclamations like 'wow' and focus on thought-provoking statements.
-        2.Create two relevant hashtags to increase the visibility of your tweet. These hashtags should be short and common, such as the names of people or places mentioned in the news.
-    Remember, your tweet should remain under 100 characters to maintain the fast-paced, attention-grabbing style of a tech influencer. Your language should be engaging and reflect your authority in the field of science and technology. 
-    Keep the response to consist solely of the post content without any additional words or quotation marks. The language you use to reply is {language}.  
-    ""
     # system_text=f"""
     # Imagine you are a sarcastic commentator!. \
     #     I will provide you with the latest news title and a brief description \
@@ -33,7 +22,7 @@ def generate_tweet(api_key,prompt,language):
     temperature=1.1,
     max_tokens=250,
     messages=[
-        {"role": "system", "content": system_text},
+        {"role": "system", "content": sys_prompt},
         {"role": "user", "content": prompt}
     ]
     )
