@@ -64,11 +64,12 @@ def save_posted_news(news_id):
     local_data.posted_news.append(news_id) 
 
 
-
+news_list=[]
 my_queue = queue.LifoQueue()  # 使用LIFO队列 
 def put_unique_message(queue_obj, message):
     # 检查队列中是否已经存在相同的消息
-    if message not in queue_obj.queue:
+    if message not in news_list:
+        news_list.append(message)
         queue_obj.put(message)
         logger.info(f"Inserted unique message: {message}")
     #else:
