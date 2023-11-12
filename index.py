@@ -237,14 +237,14 @@ if __name__ == "__main__":
     # Counter to keep track of job executions
     max_job_executions = 50
 
-    # 指定目标时区
-    us_timezone = 'America/Los_Angeles'
-
     news_req_interval=1  #每1分钟检查一次rss
     publish_time_limt=60
-    language_to_tweet="English"
-    rss_category=["Tech",'AI','Apple','Career','Coding','DataSci','Medium','News','VC','Web3','EVs','Courses']
 
+    # 指定目标时区\语言\主题
+    us_timezone = config['general']["TIMEZONE"]
+    language_to_tweet=config['general']["LANGUAGE"]
+    rss_category= config['general']["TOPICS"].replace(' ','').split(',') 
+    
 
     schedule_job(news_req_interval,rss_category,publish_time_limt,language_to_tweet,us_timezone)
 
