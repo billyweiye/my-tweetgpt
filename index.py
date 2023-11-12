@@ -243,7 +243,7 @@ if __name__ == "__main__":
     news_req_interval=1  #每1分钟检查一次rss
     publish_time_limt=60
     language_to_tweet="English"
-    rss_category=["Tech",'AI','EVs','Courses']
+    rss_category=["Tech",'AI','Apple','Career','Coding','DataSci','Medium','News','VC','Web3','EVs','Courses']
 
 
     schedule_job(news_req_interval,rss_category,publish_time_limt,language_to_tweet,us_timezone)
