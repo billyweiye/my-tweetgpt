@@ -1,9 +1,10 @@
-import openai
+from openai import OpenAI
 
 
 
 def generate_tweet(api_key,prompt,sys_prompt):
-    openai.api_key =api_key
+
+    client = OpenAI(api_key=api_key)
 
     # system_text=f"""
     # Imagine you are a sarcastic commentator!. \
@@ -17,10 +18,13 @@ def generate_tweet(api_key,prompt,sys_prompt):
     #     Your reply should start with comment content directly and end with hashtags.
     #     The language you use to reply is {language}."""
         
-    completion = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo",
+    completion = client.chat.completions.create(
+    model="gpt-4o",
     temperature=1.1,
     max_tokens=250,
+    top_p=1,
+    frequency_penalty=0,
+    presence_penalty=0,
     messages=[
         {"role": "system", "content": sys_prompt},
         {"role": "user", "content": prompt}
@@ -28,3 +32,4 @@ def generate_tweet(api_key,prompt,sys_prompt):
     )
 
     return completion.choices[0].message.content
+
