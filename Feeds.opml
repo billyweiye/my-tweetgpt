@@ -108,12 +108,15 @@
 <outline title="Travel" text="Travel">
 <outline xmlUrl="https://travel.state.gov/_res/rss/TAsTWs.xml" type="rss" htmlUrl="http://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html" title="travel.state.gov: Travel Advisories" text="travel.state.gov: Travel Advisories" />
 </outline>
-<outline text="VC" title="VC">
-<outline htmlUrl="https://www.youtube.com/channel/UC9cn0TuPq4dnbTY-CBsm8XA" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC9cn0TuPq4dnbTY-CBsm8XA" type="rss" title="a16z" text="a16z" />
+<outline title="Invest" text="Invest">
+<outline type="rss" htmlUrl="https://www.youtube.com/channel/UC9cn0TuPq4dnbTY-CBsm8XA" title="a16z" text="a16z" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC9cn0TuPq4dnbTY-CBsm8XA" />
 <outline title="Sequoia Capital" text="Sequoia Capital" type="rss" xmlUrl="https://www.sequoiacap.com/feed/" htmlUrl="https://www.sequoiacap.com/" />
-<outline type="rss" title="Andreessen Horowitz" htmlUrl="https://a16z.com/" text="Andreessen Horowitz" xmlUrl="https://a16z.com/feed" />
-<outline type="rss" title="Founders Fund" htmlUrl="https://foundersfund.com/" text="Founders Fund" xmlUrl="https://foundersfund.com/feed/" />
-<outline text="ValueWalk" type="rss" title="ValueWalk" htmlUrl="https://www.valuewalk.com" xmlUrl="http://www.valuewalk.com/feed/" />
+<outline htmlUrl="https://a16z.com/" text="Andreessen Horowitz" type="rss" title="Andreessen Horowitz" xmlUrl="https://a16z.com/feed" />
+<outline text="Founders Fund" title="Founders Fund" type="rss" xmlUrl="https://foundersfund.com/feed/" htmlUrl="https://foundersfund.com/" />
+<outline text="ValueWalk" htmlUrl="https://www.valuewalk.com/" xmlUrl="http://www.valuewalk.com/feed/" title="ValueWalk" type="rss" />
+<outline xmlUrl="https://www.appeconomyinsights.com/feed" htmlUrl="https://www.appeconomyinsights.com" text="How They Make Money" type="rss" title="How They Make Money" />
+<outline type="rss" text="Bits about Money" title="Bits about Money" htmlUrl="https://www.bitsaboutmoney.com/" xmlUrl="https://www.bitsaboutmoney.com/archive/rss/" />
+<outline type="rss" title="The Macro Compass" htmlUrl="https://themacrocompass.substack.com" xmlUrl="https://themacrocompass.substack.com/feed" text="The Macro Compass" />
 </outline>
 <outline text="Web3" title="Web3">
 <outline text="The Web3 Labs Blog" type="rss" htmlUrl="https://blog.web3labs.com" title="The Web3 Labs Blog" xmlUrl="https://blog.web3labs.com/rss.xml" />
