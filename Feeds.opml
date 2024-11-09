@@ -22,7 +22,6 @@
 <outline xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCHuiy8bXnmK5nisYHUd1J5g" text="NVIDIA" htmlUrl="https://www.youtube.com/channel/UCHuiy8bXnmK5nisYHUd1J5g" type="rss" title="NVIDIA" />
 <outline text="arXiv.org" xmlUrl="https://export.arxiv.org/rss/cs.LG" type="rss" htmlUrl="http://arxiv.org/" title="arXiv.org" />
 <outline type="rss" htmlUrl="https://huggingface.co/blog" text="Hugging Face - Blog" title="Hugging Face - Blog" xmlUrl="https://huggingface.co/blog/feed.xml" />
-<outline type="rss" htmlUrl="https://www.theverge.com/ai-artificial-intelligence" text="The Verge - Artificial Intelligences" xmlUrl="https://www.theverge.com/rss/ai-artificial-intelligence/index.xml" title="The Verge - Artificial Intelligences" />
 <outline title="Google AI Blog" xmlUrl="http://googleresearch.blogspot.com/atom.xml" htmlUrl="http://blog.research.google/" text="Google AI Blog" type="rss" />
 <outline title="Andrej Karpathy" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ" type="rss" htmlUrl="https://www.youtube.com/channel/UCXUPKJO5MZQN11PqgIvyuvQ" text="Andrej Karpathy" />
 </outline>
@@ -68,9 +67,7 @@
 </outline>
 <outline text="EVs" title="EVs">
 <outline xmlUrl="https://www.youtube.com/feeds/videos.xml?user=fullychargedshow" type="rss" htmlUrl="https://www.youtube.com/channel/UCzz4CoEgSgWNs9ZAvRMhW2A" title="Fully Charged Show" text="Fully Charged Show" />
-<outline title="The Verge -  Transpo Posts" htmlUrl="https://www.theverge.com/transportation" text="The Verge -  Transpo Posts" type="rss" xmlUrl="http://www.theverge.com/transportation/rss/index.xml" />
 <outline title="Auto Focus" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC2J-0g_nxlwcD9JBK1eTleQ" type="rss" htmlUrl="https://www.youtube.com/channel/UC2J-0g_nxlwcD9JBK1eTleQ" text="Auto Focus" />
-<outline title="The Verge - Transpo Posts" text="The Verge - Transpo Posts" htmlUrl="https://www.theverge.com/transportation" xmlUrl="http://www.theverge.com/transportation/rss/index.xml" type="rss" />
 </outline>
 <outline text="LifeStyle" title="LifeStyle">
 <outline text="CIC News" title="CIC News" type="rss" htmlUrl="https://www.cicnews.com" xmlUrl="https://www.cicnews.com/feed" />
@@ -92,16 +89,12 @@
 <outline xmlUrl="https://www.backblaze.com/blog/feed/" text="Backblaze Blog | Cloud Storage &amp; Cloud Backup" type="rss" title="Backblaze Blog | Cloud Storage &amp; Cloud Backup" htmlUrl="https://www.backblaze.com/blog/" />
 <outline htmlUrl="https://www.youtube.com/channel/UCrM7B7SL_g1edFOnmj-SDKg" type="rss" text="Bloomberg Technology" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCrM7B7SL_g1edFOnmj-SDKg" title="Bloomberg Technology" />
 <outline type="rss" htmlUrl="https://www.scmp.com" xmlUrl="http://www.scmp.com/rss/36/feed" text="Tech - South China Morning Post" title="Tech - South China Morning Post" />
-<outline type="rss" xmlUrl="http://www.theverge.com/tech/rss/index.xml" title="The Verge - Tech Posts" text="The Verge - Tech Posts" htmlUrl="https://www.theverge.com/tech" />
 <outline type="rss" htmlUrl="https://www.nytimes.com/section/technology" title="NYT &gt; Technology" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml" text="NYT &gt; Technology" />
-<outline text="The Verge -  Artificial Intelligences" type="rss" htmlUrl="https://www.theverge.com/ai-artificial-intelligence" xmlUrl="https://www.theverge.com/rss/ai-artificial-intelligence/index.xml" title="The Verge -  Artificial Intelligences" />
 <outline type="rss" htmlUrl="https://news.mit.edu/topic/mitcomputers-rss.xml" text="MIT News - Computer Science and Artificial Intelligence Laboratory (CSAIL)" title="MIT News - Computer Science and Artificial Intelligence Laboratory (CSAIL)" xmlUrl="http://web.mit.edu/newsoffice/topic/mitcomputers-rss.xml" />
-<outline text="TechCrunch" type="rss" xmlUrl="https://techcrunch.com/feed/" title="TechCrunch" htmlUrl="https://techcrunch.com/" />
 <outline xmlUrl="https://www.amazon.science/index.rss" htmlUrl="https://www.amazon.science/" type="rss" text="Amazon Science homepage" title="Amazon Science homepage" />
 <outline text="Crunchbase News" htmlUrl="https://news.crunchbase.com/" type="rss" xmlUrl="https://news.crunchbase.com/feed/" title="Crunchbase News" />
 <outline text="Marques Brownlee" htmlUrl="https://www.youtube.com/channel/UCBJycsmduvYEL83R_U4JriQ" title="Marques Brownlee" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?user=MarquesBrownlee" />
 <outline text="The Verge - Policy Posts" htmlUrl="https://www.theverge.com/policy" xmlUrl="https://www.theverge.com/policy/rss/index.xml" type="rss" title="The Verge - Policy Posts" />
-<outline xmlUrl="https://www.theverge.com/rss/tiktok/index.xml" text="The Verge - TikToks" title="The Verge - TikToks" htmlUrl="https://www.theverge.com/tiktok" type="rss" />
 <outline htmlUrl="https://news.mit.edu/topic/mitcomputers-rss.xml" title="MIT News - Computer Science and Artificial Intelligence Laboratory (CSAIL)" type="rss" text="MIT News - Computer Science and Artificial Intelligence Laboratory (CSAIL)" xmlUrl="http://web.mit.edu/newsoffice/topic/mitcomputers-rss.xml" />
 <outline htmlUrl="https://www.microsoft.com/en-us/research/blog/" xmlUrl="http://research.microsoft.com/rss/news.xml" title="Microsoft Research Blog - Microsoft Research" type="rss" text="Microsoft Research Blog - Microsoft Research" />
 </outline>
@@ -109,13 +102,9 @@
 <outline xmlUrl="https://travel.state.gov/_res/rss/TAsTWs.xml" type="rss" htmlUrl="http://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html" title="travel.state.gov: Travel Advisories" text="travel.state.gov: Travel Advisories" />
 </outline>
 <outline title="Invest" text="Invest">
-<outline type="rss" htmlUrl="https://www.youtube.com/channel/UC9cn0TuPq4dnbTY-CBsm8XA" title="a16z" text="a16z" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC9cn0TuPq4dnbTY-CBsm8XA" />
 <outline title="Sequoia Capital" text="Sequoia Capital" type="rss" xmlUrl="https://www.sequoiacap.com/feed/" htmlUrl="https://www.sequoiacap.com/" />
-<outline htmlUrl="https://a16z.com/" text="Andreessen Horowitz" type="rss" title="Andreessen Horowitz" xmlUrl="https://a16z.com/feed" />
 <outline text="Founders Fund" title="Founders Fund" type="rss" xmlUrl="https://foundersfund.com/feed/" htmlUrl="https://foundersfund.com/" />
-<outline text="ValueWalk" htmlUrl="https://www.valuewalk.com/" xmlUrl="http://www.valuewalk.com/feed/" title="ValueWalk" type="rss" />
 <outline xmlUrl="https://www.appeconomyinsights.com/feed" htmlUrl="https://www.appeconomyinsights.com" text="How They Make Money" type="rss" title="How They Make Money" />
-<outline type="rss" text="Bits about Money" title="Bits about Money" htmlUrl="https://www.bitsaboutmoney.com/" xmlUrl="https://www.bitsaboutmoney.com/archive/rss/" />
 <outline type="rss" title="The Macro Compass" htmlUrl="https://themacrocompass.substack.com" xmlUrl="https://themacrocompass.substack.com/feed" text="The Macro Compass" />
 </outline>
 <outline text="Web3" title="Web3">
