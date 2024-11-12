@@ -109,7 +109,6 @@
 </outline>
 <outline text="Web3" title="Web3">
 <outline text="The Web3 Labs Blog" type="rss" htmlUrl="https://blog.web3labs.com" title="The Web3 Labs Blog" xmlUrl="https://blog.web3labs.com/rss.xml" />
-<outline title="CoinDesk: Bitcoin, Ethereum, Crypto News and Price Data" htmlUrl="https://www.coindesk.com" text="CoinDesk: Bitcoin, Ethereum, Crypto News and Price Data" type="rss" xmlUrl="https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml" />
 </outline>
 <outline title="加密货币" text="加密货币">
 <outline htmlUrl="https://rss.panewslab.com/" xmlUrl="https://rss.panewslab.com/zh/gtimg/rss" type="rss" title="PANews News" text="PANews News" />
