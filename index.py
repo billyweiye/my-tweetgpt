@@ -148,7 +148,7 @@ def tweet_job(sys_prompt,timezone):
                     tweets=generate_tweet(openai_api_key,prompts,sys_prompt)
                     
                     #加上news link
-                    tweets = f"{news_url} " + tweets
+                #    tweets = f"{news_url} " + tweets
                     # tweets += f" {news_url}"
                 else:  #youtube content  post directly
                     tweets = f"{new_description} {news_url}"
