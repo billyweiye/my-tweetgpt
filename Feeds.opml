@@ -114,7 +114,10 @@
 <outline type="rss" title="The Macro Compass" htmlUrl="https://themacrocompass.substack.com" xmlUrl="https://themacrocompass.substack.com/feed" text="The Macro Compass" />
 </outline>
 <outline text="Web3" title="Web3">
-<outline text="The Web3 Labs Blog" type="rss" htmlUrl="https://blog.web3labs.com" title="The Web3 Labs Blog" xmlUrl="https://blog.web3labs.com/rss.xml" />
+<outline text="The Web3 Labs Blog" title="The Web3 Labs Blog" type="rss" xmlUrl="https://blog.web3labs.com/rss.xml" htmlUrl="https://blog.web3labs.com" rssfr-numPosts="0" rssfr-favicon="https://icons.feedercdn.com/blog.web3labs.com" rssfr-useNotifications="0" rssfr-updateInterval=""/>
+<outline text="CoinDesk: Bitcoin, Ethereum, Crypto News and Price Data" title="CoinDesk: Bitcoin, Ethereum, Crypto News and Price Data" type="rss" xmlUrl="https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml" htmlUrl="https://www.coindesk.com" rssfr-numPosts="0" rssfr-favicon="https://icons.feedercdn.com/www.coindesk.com" rssfr-useNotifications="0" rssfr-updateInterval=""/>
+<outline text="Chainlink Blog" title="Chainlink Blog" type="rss" xmlUrl="https://blog.chain.link/feed/" htmlUrl="https://blog.chain.link" rssfr-numPosts="0" rssfr-favicon="https://icons.feedercdn.com/blog.chain.link" rssfr-useNotifications="0" rssfr-updateInterval=""/>
+<outline text="The Oracle by Polymarket" title="The Oracle by Polymarket" type="rss" xmlUrl="https://news.polymarket.com/feed" htmlUrl="https://news.polymarket.com" rssfr-numPosts="0" rssfr-favicon="https://icons.feedercdn.com/news.polymarket.com" rssfr-useNotifications="0" rssfr-updateInterval=""/>
 </outline>
 <outline title="加密货币" text="加密货币">
 <outline htmlUrl="https://rss.panewslab.com/" xmlUrl="https://rss.panewslab.com/zh/gtimg/rss" type="rss" title="PANews News" text="PANews News" />
