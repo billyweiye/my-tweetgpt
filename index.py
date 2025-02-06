@@ -129,6 +129,7 @@ def tweet_job(sys_prompt,timezone):
                 news=get_feed_queue()
                 news_id=news.get("id")
                 if news_id in get_posted_news() :
+                    logger.info("No New Source Found")
                     time.sleep(1) 
                     continue
 
@@ -137,6 +138,7 @@ def tweet_job(sys_prompt,timezone):
                 new_description=news.get("description")
                 news_url=news.get("link")
                 news_content=news.get("content")
+                logger.info(f"New Source Found: {news_id}")
 
                 #调用GPT 生成content
                 if 'youtube' not in news_url:
@@ -240,7 +242,7 @@ if __name__ == "__main__":
     }
 
     # Counter to keep track of job executions
-    max_job_executions = 50
+    max_job_executions = 17
 
     news_req_interval=1  #每1分钟检查一次rss
     publish_time_limt=60
