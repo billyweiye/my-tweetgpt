@@ -20,7 +20,7 @@ def generate_tweet(api_key,prompt,sys_prompt):
         
     completion = client.chat.completions.create(
     model="o3-mini",
-    temperature=1.1,
+    # temperature=1.1,
     # max_tokens=250,
     max_completion_tokens=300,
     top_p=1,
