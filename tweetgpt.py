@@ -22,7 +22,7 @@ def generate_tweet(api_key,prompt,sys_prompt):
     model="o3-mini",
     # temperature=1.1,
     # max_tokens=250,
-    max_completion_tokens=300,
+    max_completion_tokens=3000,
     top_p=1,
     frequency_penalty=0,
     presence_penalty=0,
