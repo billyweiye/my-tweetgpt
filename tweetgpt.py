@@ -19,7 +19,7 @@ def generate_tweet(api_key,prompt,sys_prompt):
     #     The language you use to reply is {language}."""
         
     completion = client.chat.completions.create(
-    model="gpt-4o",
+    model="o3-mini",
     temperature=1.1,
     max_tokens=250,
     top_p=1,
