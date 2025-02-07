@@ -94,17 +94,17 @@ def get_feed_queue():
 
 def post_interval(current_time):
     if current_time.hour >= 9 and current_time.hour < 14:
-        min_tweet_interval=8
-        max_tweet_interval=10
-    elif current_time.hour >= 19 and current_time.hour < 22:
-        min_tweet_interval=15
+        min_tweet_interval=16
         max_tweet_interval=20
+    elif current_time.hour >= 19 and current_time.hour < 22:
+        min_tweet_interval=30
+        max_tweet_interval=40
     elif (current_time-datetime.datetime(current_time.year,current_time.month,current_time.day,9,0,0,tzinfo=current_time.tzinfo)).seconds<=190*60 or (current_time-datetime.datetime(current_time.year,current_time.month,current_time.day,19,0,0,tzinfo=current_time.tzinfo)).seconds<=190*60:
         min_tweet_interval=min([(current_time-datetime.datetime(current_time.year,current_time.month,current_time.day,9,0,0,tzinfo=current_time.tzinfo)).seconds/60,(current_time-datetime.datetime(current_time.year,current_time.month,current_time.day,19,0,0,tzinfo=current_time.tzinfo)).seconds/60])
         max_tweet_interval=min([(current_time-datetime.datetime(current_time.year,current_time.month,current_time.day,9,0,0,tzinfo=current_time.tzinfo)).seconds/60,(current_time-datetime.datetime(current_time.year,current_time.month,current_time.day,19,0,0,tzinfo=current_time.tzinfo)).seconds/60])
     else:
-        min_tweet_interval=190
-        max_tweet_interval=200
+        min_tweet_interval=190*2
+        max_tweet_interval=200*2
     return (min_tweet_interval,max_tweet_interval)
 
 
